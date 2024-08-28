@@ -1,0 +1,12 @@
+@import 'sections/hero.scss';
+@import 'utils/varibles.scss';
+
+h1 {
+    font-size: $H1-size;
+}
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,53 @@
+.banner {
+  background-image: linear-gradient(360deg, rgba(99, 102, 241, 0.18) 0%, rgba(218, 70, 239, 0.12) 42%, rgba(241, 244, 253, 0.07) 83%);
+  height: auto;
+}
+
+.banner-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+}
+
+.banner-content {
+  display: flex;
+  padding-top: 15%;
+  padding-left: 15%;
+  padding-right: 15%;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-market {
+  padding-top: 1.5em;
+}
+
+.banner-image-container {
+  height: 90%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+}
+
+.banner-phone-image {
+  height: 50em;
+}
+
+.banner-scroll-to-discover {
+  margin-top: 10em;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+body {
+  font-family: "Manrope", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
