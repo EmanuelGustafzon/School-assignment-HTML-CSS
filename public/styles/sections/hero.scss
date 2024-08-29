@@ -34,17 +34,17 @@
     border: none;
     margin-right: 20px;
     border-radius: 10px;
-    @include build-image("/public/images/appstore.svg", 180px, 52px);
+    @include build-image("../../public/images/appstore.svg", 180px, 52px);
     body.dark-theme & {
-        @include build-image("/public/images/dark-theme/appstore-dark-theme.svg", 180px, 52px);
+        @include build-image("../../public/images/dark-theme/appstore-dark-theme.svg", 180px, 52px);
     }
 }
 .banner-market-googleplay {
     border: none;
     border-radius: 10px;
-    @include build-image("/public/images/googleplay.svg", 180px, 52px);
+    @include build-image("../../public/images/googleplay.svg", 180px, 52px);
     body.dark-theme & {
-        @include build-image("/public/images/dark-theme/googleplay-dark-theme.svg", 180px, 52px);
+        @include build-image("../../public/images/dark-theme/googleplay-dark-theme.svg", 180px, 52px);
     }
 }
 .banner-image-container {
@@ -66,8 +66,8 @@
     font: $m-text;
 }
 .down-arrow-image {
-    @include build-image("/public/images/next-btn.svg", 4rem, 4rem);
+    @include build-image("../../public/images/next-btn.svg", 4rem, 4rem);
     body.dark-theme & {
-        @include build-image("/public/images/dark-theme/next-btn-dark-mode.svg", 3.5rem, 3.5rem);
+        @include build-image("../../public/images/dark-theme/next-btn-dark-mode.svg", 3.5rem, 3.5rem);
     }
 }
