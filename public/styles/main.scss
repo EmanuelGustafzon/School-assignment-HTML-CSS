@@ -1,12 +1,15 @@
 @import 'sections/hero.scss';
 @import 'utils/varibles.scss';
+@import 'themes/dark-theme.scss';
+@import 'themes/light-theme.scss';
+@import 'components/navbar.scss';
 
-h1 {
-    font-size: $H1-size;
+* {
+    margin: 0;
+    padding: 0; 
+    font-family: $font-stack;
 }
 
-body {
-    font-family: $font-stack;
-    margin: 0;
-    padding: 0;
+a {
+    text-decoration: none;
 }

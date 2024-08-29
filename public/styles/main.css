@@ -1,53 +1,155 @@
 .banner {
-  background-image: linear-gradient(360deg, rgba(99, 102, 241, 0.18) 0%, rgba(218, 70, 239, 0.12) 42%, rgba(241, 244, 253, 0.07) 83%);
+  background-image: linear-gradient(350deg, rgba(99, 102, 241, 0.15) 0%, rgba(218, 70, 239, 0.07) 42%, rgba(241, 244, 253, 0.07) 83%);
   height: auto;
+  padding-top: 100px;
 }
 
 .banner-wrapper {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 45% 50%;
   position: relative;
 }
 
 .banner-content {
   display: flex;
   padding-top: 15%;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 50px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+.banner-heading {
+  font: 800 3.5rem "Manrope", Helvetica, sans-serif;
+  margin-bottom: 0.5em;
+}
+
+.banner-text {
+  font: 500 1.125rem "Manrope", Helvetica, sans-serif;
+  color: #565973;
+  margin-bottom: 3em;
 }
 
 .banner-market {
-  padding-top: 1.5em;
+  display: flex;
+}
+
+.banner-market-appstore {
+  border: none;
+  margin-right: 20px;
+  border-radius: 10px;
+  background-image: url(/public/images/appstore.svg);
+  background-size: cover;
+  background-position: center;
+  width: 180px;
+  height: 52px;
+}
+body.dark-theme .banner-market-appstore {
+  background-image: url(/public/images/dark-theme/appstore-dark-theme.svg);
+  background-size: cover;
+  background-position: center;
+  width: 180px;
+  height: 52px;
+}
+
+.banner-market-googleplay {
+  border: none;
+  border-radius: 10px;
+  background-image: url(/public/images/googleplay.svg);
+  background-size: cover;
+  background-position: center;
+  width: 180px;
+  height: 52px;
+}
+body.dark-theme .banner-market-googleplay {
+  background-image: url(/public/images/dark-theme/googleplay-dark-theme.svg);
+  background-size: cover;
+  background-position: center;
+  width: 180px;
+  height: 52px;
 }
 
 .banner-image-container {
   height: 90%;
   overflow: hidden;
   position: absolute;
+  right: 50px;
   bottom: 0px;
 }
 
 .banner-phone-image {
-  height: 50em;
+  height: 55em;
 }
 
 .banner-scroll-to-discover {
-  margin-top: 10em;
-  margin-bottom: 2rem;
+  margin-top: 8em;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  color: #9397AD;
+  font: 500 1rem "Manrope", Helvetica, sans-serif;
+}
+
+.down-arrow-image {
+  background-image: url(/public/images/next-btn.svg);
+  background-size: cover;
+  background-position: center;
+  width: 4rem;
+  height: 4rem;
+}
+body.dark-theme .down-arrow-image {
+  background-image: url(/public/images/dark-theme/next-btn-dark-mode.svg);
+  background-size: cover;
+  background-position: center;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.dark-theme {
+  background-color: #0B0F19;
+  color: white;
+}
+.dark-theme a {
+  color: white;
+}
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+.light-theme a {
+  color: black;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  margin-left: 50px;
   display: flex;
   align-items: center;
 }
 
-h1 {
-  font-size: 40px;
+.theme-and-login-container {
+  margin-right: 80px;
+  display: flex;
+  align-items: center;
 }
 
-body {
-  font-family: "Manrope", Helvetica, sans-serif;
+* {
   margin: 0;
   padding: 0;
+  font-family: "Manrope", Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,42 @@
+// TYPOGRAPHY
 $font-stack: 'Manrope', Helvetica, sans-serif;
-$H1-size: 40px;
-$H2-size: 32px;
+$font-extra-bold: 800;
+$font-bold: 700;
+$font-normal: 500;
+// Headings
+$display-1: $font-extra-bold 5rem $font-stack;
+$display-2: $font-extra-bold 4.5rem $font-stack;
+$display-3: $font-extra-bold 4rem $font-stack;
+$display-4: $font-extra-bold 3.5rem $font-stack;
+$display-5: $font-extra-bold 3rem $font-stack;
+$display-6: $font-extra-bold 2.5rem $font-stack;
 
-$gray-100: #F3F6FF;
+$heading-1: 2.5rem $font-stack;
+$heading-2: 2rem $font-stack;
+$heading-3: 1.75rem $font-stack;
+$heading-4: 1.5rem $font-stack;
+$heading-5: 1.5rem $font-stack;
+$heading-6: 1rem $font-stack;
+
+//Body Text
+$lead-text: $font-bold 1.5rem $font-stack; 
+$xl-text: $font-bold 1.25rem $font-stack; 
+$l-text: $font-normal 1.125rem $font-stack; 
+$m-text: $font-normal 1rem $font-stack; 
+$s-text: $font-normal 0.875rem $font-stack; 
+$xs-text: $font-normal 0.75rem $font-stack; 
+
+// COLORS
+
+// Gray Scale
+
+$gray-100:#F3F6FF;
+$gray-200:#EFF2FC;
+$gray-300:#E2E5F1;
+$gray-400:#D4D7E5;
+$gray-500:#B4B7C9;
+$gray-600:#9397AD;
+$gray-700:#565973;
+$gray-800:#33354D;
+$gray-900:#0B0F19;
+

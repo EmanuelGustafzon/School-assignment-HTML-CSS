@@ -9,18 +9,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <nav></nav>
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="/" class="logo">
+                <img src="/public/images/logo.svg " alt="logo">
+            </a>
+            <a href="/" class="desktop nav-features">Features</a>
+        </div>
+        <div class="desktop theme-and-login-container">
+            <span class="theme-text">Dark Mode</span>
+            <button 
+                onclick="(function() {
+                    const bodyElement = document.getElementsByTagName('body')[0];
+                    bodyElement.className === 'light-theme' ? bodyElement.className = 'dark-theme' : bodyElement.className = 'light-theme'; 
+                    }())" 
+                class="btn"
+                >
+                Toggle
+            </button>
+        </div>
+    </nav>
 
     <header class="banner">
         <div class="banner-wrapper">
             <div class="banner-content">
                 <div>
                     <h1 class="banner-heading">Manage All Your Money in One App</h1>
-                    <p class="banner-text">We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket</p>
-                    <img class="banner-market" height="50px" src="public/images/market.svg" alt="">
+                <p class="banner-text">We offer you a new generation of the mobile banking. 
+                        Save, spend & manage money in your pocket.
+                    </p>
+                    <div class="banner-market">
+                        <a href="https://www.apple.com/se/app-store/" target="_blank" class="banner-market-appstore"></a>
+                        <a href="https://play.google.com/store/games?device=windows&pli=1" target="_blank" class="banner-market-googleplay"></a>
+                    </div>
                     <div class="banner-scroll-to-discover">
-                        <img src="public/images/next-btn.svg" alt=""/>
+                        <div class="down-arrow-image"></div>
                         <span>Discover more</span>
                     </div>
                 </div>
@@ -32,6 +56,6 @@
             </div>
         </div>
     </header>
-    <footer></footer>
+    <footer class="footer"></footer>
 </body>
 </html>
