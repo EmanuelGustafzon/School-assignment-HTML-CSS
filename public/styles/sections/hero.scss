@@ -20,7 +20,9 @@
 }
 .banner-heading {
     font: $display-4;
-    margin-bottom: 0.5em;
+    padding-left: 50px;
+    margin-bottom: -70px;
+    width: 45%;
 }
 .banner-text {
     font: $l-text;
@@ -48,18 +50,18 @@
     }
 }
 .banner-image-container {
-    height: 90%;
+    height: 120%;
     overflow: hidden;
     position: absolute;
     right: 50px;
     bottom: 0px;
 }
 .banner-phone-image {
-    height: 55em;
+    height: 50em;
 }
 .banner-scroll-to-discover {
-    margin-top: 8em;
-    margin-bottom: 3rem;
+    margin-top: 6em;
+    margin-bottom: 2em;
     display: flex;
     align-items: center;
     color: $gray-600;
@@ -69,5 +71,78 @@
     @include build-image("../../public/images/next-btn.svg", 4rem, 4rem);
     body.dark-theme & {
         @include build-image("../../public/images/dark-theme/next-btn-dark-mode.svg", 3.5rem, 3.5rem);
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner-wrapper {
+        grid-template-columns: 48% 40%;
+    }
+    .banner-heading {
+        width:80%;
+        padding-left: 10%;
+        margin-bottom: 40px;
+    }
+    .banner-image-container {
+        height: 90%;
+    }
+    .banner-content {
+        justify-content: flex-start;
+        padding-left: 20%;
+    }
+    .banner-phone-image {
+        height: 35em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .banner-image-container {
+        right: 0;
+    }
+    .banner-market-appstore, .banner-market-googleplay {
+        width: 160px;
+    }
+}
+
+@media (max-width: 800px) {
+    .banner-wrapper {
+        display: block;
+    }
+    .banner-content {
+        padding-top: 5%;
+        padding-left: 10px;
+    }
+    .banner-heading {
+        font: $display-6;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .banner-text {
+        margin-top: 5px;
+        padding: 5px;
+        text-align: center;
+    }
+    .banner-market{
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-market-appstore {
+        margin: 5px;
+    }
+    .banner-scroll-to-discover {
+        margin-top: 3em;
+        justify-content: center;
+    }
+    .banner-image-container, .banner-phone-image {
+       display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-market-appstore {
+        width: 150px;
+    }
+    .banner-market-googleplay {
+        width: 150px;
     }
 }
