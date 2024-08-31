@@ -1,7 +1,7 @@
 .banner {
   background-image: linear-gradient(350deg, rgba(99, 102, 241, 0.15) 0%, rgba(218, 70, 239, 0.07) 42%, rgba(241, 244, 253, 0.07) 83%);
   height: auto;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .banner-wrapper {
@@ -26,7 +26,7 @@
 }
 
 .banner-text {
-  font: 500 1.125rem "Manrope", Helvetica, sans-serif;
+  font: 700 1.125rem "Manrope", Helvetica, sans-serif;
   color: #565973;
   margin-bottom: 3em;
 }
@@ -42,14 +42,14 @@
   background-image: url(../../public/images/appstore.svg);
   background-size: cover;
   background-position: center;
-  width: 180px;
+  width: 170px;
   height: 52px;
 }
 body.dark-theme .banner-market-appstore {
   background-image: url(../../public/images/dark-theme/appstore-dark-theme.svg);
   background-size: cover;
   background-position: center;
-  width: 180px;
+  width: 170px;
   height: 52px;
 }
 
@@ -59,19 +59,19 @@ body.dark-theme .banner-market-appstore {
   background-image: url(../../public/images/googleplay.svg);
   background-size: cover;
   background-position: center;
-  width: 180px;
+  width: 170px;
   height: 52px;
 }
 body.dark-theme .banner-market-googleplay {
   background-image: url(../../public/images/dark-theme/googleplay-dark-theme.svg);
   background-size: cover;
   background-position: center;
-  width: 180px;
+  width: 170px;
   height: 52px;
 }
 
 .banner-image-container {
-  height: 120%;
+  height: 520px;
   overflow: hidden;
   position: absolute;
   right: 50px;
@@ -79,7 +79,7 @@ body.dark-theme .banner-market-googleplay {
 }
 
 .banner-phone-image {
-  height: 50em;
+  height: 800px;
 }
 
 .banner-scroll-to-discover {
@@ -90,20 +90,23 @@ body.dark-theme .banner-market-googleplay {
   color: #9397AD;
   font: 500 1rem "Manrope", Helvetica, sans-serif;
 }
+.banner-scroll-to-discover span {
+  margin-left: 10px;
+}
 
 .down-arrow-image {
   background-image: url(../../public/images/next-btn.svg);
   background-size: cover;
   background-position: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 body.dark-theme .down-arrow-image {
   background-image: url(../../public/images/dark-theme/next-btn-dark-mode.svg);
   background-size: cover;
   background-position: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -111,30 +114,29 @@ body.dark-theme .down-arrow-image {
     grid-template-columns: 48% 40%;
   }
   .banner-heading {
+    font: 800 2.5rem "Manrope", Helvetica, sans-serif;
     width: 80%;
-    padding-left: 10%;
+    margin-left: 10%;
     margin-bottom: 40px;
   }
   .banner-image-container {
-    height: 90%;
+    height: 500px;
+  }
+  .banner-phone-image {
+    height: 700px;
+    width: 400px;
   }
   .banner-content {
     justify-content: flex-start;
     padding-left: 20%;
-  }
-  .banner-phone-image {
-    height: 35em;
   }
 }
 @media (max-width: 1000px) {
   .banner-image-container {
     right: 0;
   }
-  .banner-market-appstore, .banner-market-googleplay {
-    width: 160px;
-  }
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .banner-wrapper {
     display: block;
   }
@@ -143,7 +145,7 @@ body.dark-theme .down-arrow-image {
     padding-left: 10px;
   }
   .banner-heading {
-    font: 800 2.5rem "Manrope", Helvetica, sans-serif;
+    margin-left: 0;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -156,9 +158,6 @@ body.dark-theme .down-arrow-image {
     justify-content: center;
     align-items: center;
   }
-  .banner-market-appstore {
-    margin: 5px;
-  }
   .banner-scroll-to-discover {
     margin-top: 3em;
     justify-content: center;
@@ -167,12 +166,9 @@ body.dark-theme .down-arrow-image {
     display: none;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 370px) {
   .banner-market-appstore {
-    width: 150px;
-  }
-  .banner-market-googleplay {
-    width: 150px;
+    margin: 0;
   }
 }
 .dark-theme {
@@ -188,7 +184,81 @@ body.dark-theme .down-arrow-image {
   color: black;
 }
 .light-theme a {
-  color: black;
+  color: #0B0F19;
+  font: 500 1rem "Manrope", Helvetica, sans-serif;
+}
+
+.toggle-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.toggle-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 46px;
+  background-color: #9397AD;
+  border-radius: 20px;
+}
+
+/* When the radio button is checked, add a blue background */
+.toggle-container input:checked ~ .checkmark {
+  background-color: #6366F1;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.toggle-container input:checked ~ .checkmark:after {
+  display: block;
+  left: 22px;
+}
+
+/* Style the indicator (dot/circle) */
+.toggle-container .checkmark:after {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 2px;
+  border-radius: 50%;
+  background: white;
+}
+
+.btn {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  border-width: 0;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #6366F1;
+  color: white;
+  font: 500 0.875rem "Manrope", Helvetica, sans-serif;
 }
 
 .navbar {
@@ -201,18 +271,82 @@ body.dark-theme .down-arrow-image {
   justify-content: space-between;
 }
 
-.logo-container {
+.nav-left {
   margin-left: 50px;
   display: flex;
   align-items: center;
 }
 
-.theme-and-login-container {
-  margin-right: 80px;
+.nav-right {
+  margin-right: 50px;
   display: flex;
   align-items: center;
 }
+.nav-right label {
+  margin-bottom: 24px;
+  margin-left: 10px;
+}
 
+.logo-name {
+  margin-left: 5px;
+  color: #0B0F19;
+  font: 700 1.125rem "Manrope", Helvetica, sans-serif;
+}
+body.dark-theme .logo-name {
+  color: white;
+}
+
+.signin {
+  margin-left: 70px;
+}
+
+.features-link {
+  margin-left: 20px;
+  font: 700 1rem "Manrope", Helvetica, sans-serif;
+}
+
+.features-link:hover {
+  color: #6366F1;
+}
+
+@media (max-width: 1200px) {
+  .features-link, .signin {
+    display: none;
+  }
+  .toggle-container {
+    margin-right: 100px;
+  }
+  .burger-menu {
+    border-width: 0;
+    background-color: transparent;
+    background-image: url(/public/images/burger-menu.svg);
+    background-size: cover;
+    background-position: center;
+    width: 31px;
+    height: 36px;
+  }
+  body.dark-theme .burger-menu {
+    background-image: url(/public/images/dark-theme/burger-menu-dark-theme.svg);
+    background-size: cover;
+    background-position: center;
+    width: 31px;
+    height: 36px;
+  }
+}
+@media (max-width: 720px) {
+  .nav-left {
+    margin-left: 20px;
+  }
+  .theme-text {
+    display: none;
+  }
+  .toggle-container {
+    margin-right: 60px;
+  }
+  .nav-right {
+    margin-right: 20px;
+  }
+}
 * {
   margin: 0;
   padding: 0;

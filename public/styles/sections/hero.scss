@@ -4,7 +4,7 @@
 .banner {
     background-image: linear-gradient(350deg,rgba(99,102,241,0.15) 0%, rgba(218,70,239,0.07) 42%, rgba(241,244,253,0.07) 83%);
     height: auto;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 .banner-wrapper {
     display: grid;
@@ -36,28 +36,28 @@
     border: none;
     margin-right: 20px;
     border-radius: 10px;
-    @include build-image("../../public/images/appstore.svg", 180px, 52px);
+    @include build-image("../../public/images/appstore.svg", 170px, 52px);
     body.dark-theme & {
-        @include build-image("../../public/images/dark-theme/appstore-dark-theme.svg", 180px, 52px);
+        @include build-image("../../public/images/dark-theme/appstore-dark-theme.svg", 170px, 52px);
     }
 }
 .banner-market-googleplay {
     border: none;
     border-radius: 10px;
-    @include build-image("../../public/images/googleplay.svg", 180px, 52px);
+    @include build-image("../../public/images/googleplay.svg", 170px, 52px);
     body.dark-theme & {
-        @include build-image("../../public/images/dark-theme/googleplay-dark-theme.svg", 180px, 52px);
+        @include build-image("../../public/images/dark-theme/googleplay-dark-theme.svg", 170px, 52px);
     }
 }
 .banner-image-container {
-    height: 120%;
+    height: 520px;
     overflow: hidden;
     position: absolute;
     right: 50px;
     bottom: 0px;
 }
 .banner-phone-image {
-    height: 50em;
+    height: 800px;
 }
 .banner-scroll-to-discover {
     margin-top: 6em;
@@ -66,11 +66,15 @@
     align-items: center;
     color: $gray-600;
     font: $m-text;
+
+    span {
+        margin-left: 10px;
+    }
 }
 .down-arrow-image {
-    @include build-image("../../public/images/next-btn.svg", 4rem, 4rem);
+    @include build-image("../../public/images/next-btn.svg", 3.5rem, 3.5rem);
     body.dark-theme & {
-        @include build-image("../../public/images/dark-theme/next-btn-dark-mode.svg", 3.5rem, 3.5rem);
+        @include build-image("../../public/images/dark-theme/next-btn-dark-mode.svg", 2.5rem, 2.5rem);
     }
 }
 
@@ -79,19 +83,21 @@
         grid-template-columns: 48% 40%;
     }
     .banner-heading {
+        font: $display-6;
         width:80%;
-        padding-left: 10%;
+        margin-left: 10%;
         margin-bottom: 40px;
     }
     .banner-image-container {
-        height: 90%;
+        height: 500px;
+    }
+    .banner-phone-image {
+        height: 700px;
+        width: 400px;
     }
     .banner-content {
         justify-content: flex-start;
         padding-left: 20%;
-    }
-    .banner-phone-image {
-        height: 35em;
     }
 }
 
@@ -99,12 +105,9 @@
     .banner-image-container {
         right: 0;
     }
-    .banner-market-appstore, .banner-market-googleplay {
-        width: 160px;
-    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
     .banner-wrapper {
         display: block;
     }
@@ -113,7 +116,7 @@
         padding-left: 10px;
     }
     .banner-heading {
-        font: $display-6;
+        margin-left: 0;
         margin-bottom: 10px;
         text-align: center;
     }
@@ -126,9 +129,6 @@
         justify-content: center;
         align-items: center;
     }
-    .banner-market-appstore {
-        margin: 5px;
-    }
     .banner-scroll-to-discover {
         margin-top: 3em;
         justify-content: center;
@@ -137,12 +137,8 @@
        display: none;
     }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 370px) {
     .banner-market-appstore {
-        width: 150px;
-    }
-    .banner-market-googleplay {
-        width: 150px;
+        margin: 0;
     }
 }

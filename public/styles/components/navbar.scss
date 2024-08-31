@@ -1,3 +1,5 @@
+@import './toggle.scss';
+@import './buttons.scss';
 .navbar {
     position: absolute;
     top: 0;
@@ -7,14 +9,68 @@
     align-items: center;
     justify-content: space-between;
 }
-.logo-container {
+.nav-left {
     margin-left: 50px;
     display: flex;
     align-items: center;
 }
 
-.theme-and-login-container {
-    margin-right: 80px;
+.nav-right {
+    margin-right: 50px;
     display: flex;
     align-items: center;
+    label {
+        margin-bottom: 24px;
+        margin-left: 10px;
+    }
+}
+.logo-name {
+    margin-left: 5px;
+    color: $gray-900;
+    body.dark-theme & {
+        color: white;
+    }
+    font: $l-text;
+}
+.signin {
+    margin-left: 70px;
+}
+.features-link { 
+    margin-left: 20px ;
+    font: $navigation;
+}
+.features-link:hover {
+    color: $brand-primary;
+}
+
+@media (max-width: 1200px) {
+    .features-link, .signin {
+        display: none;
+    }
+    .toggle-container {
+        margin-right: 100px;
+    }
+    .burger-menu {
+        border-width: 0;
+        background-color: transparent;
+        @include build-image('/public/images/burger-menu.svg', 31px, 36px);
+        body.dark-theme & {
+            @include build-image('/public/images/dark-theme/burger-menu-dark-theme.svg', 31px, 36px);
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-left {
+        margin-left: 20px;
+    }
+    .theme-text {
+        display: none;
+    }
+    .toggle-container {
+        margin-right: 60px;
+    }
+    .nav-right {
+        margin-right: 20px;
+    }
 }

@@ -11,27 +11,34 @@
 </head>
 <body class="light-theme">
     <nav class="navbar">
-        <div class="logo-container">
-            <a href="/" class="logo">
+        <div class="nav-left">
+            <a href="/" class="logo-link">
                 <img src="public/images/logo.svg" alt="logo">
             </a>
-            <a href="/" class="desktop nav-features">Features</a>
+            <span class="logo-name">Sillicon</span>
+            <a href="/" class="features-link">Features</a>
         </div>
-        <div class="desktop theme-and-login-container">
+        
+        <div class="nav-right">
             <span class="theme-text">Dark Mode</span>
-            <button 
-                onclick="(function() {
+            <label class="toggle-container">
+                <input 
+                    onclick="(function() {
                     const bodyElement = document.getElementsByTagName('body')[0];
                     bodyElement.className === 'light-theme' ? bodyElement.className = 'dark-theme' : bodyElement.className = 'light-theme'; 
-                    }())" 
-                class="btn"
-                >
-                Toggle
+                    }())"
+                    type="checkbox" id="theme-checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <button class="btn btn-primary signin">
+                Sign in / up
             </button>
+            <button class="burger-menu"></button>
         </div>
+
     </nav>
 
-    <header class="banner">
+    <div class="banner">
         <h1 class="banner-heading">Manage All Your Money in One App</h1>
         <div class="banner-wrapper">
             
@@ -56,7 +63,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </div>
     <footer class="footer"></footer>
 </body>
 </html>
