@@ -68,11 +68,11 @@
     font: $m-text;
 
     span {
-        margin-left: 10px;
+        margin-left: 5px;
     }
 }
 .down-arrow-image {
-    @include build-image("../../public/images/next-btn.svg", 3.5rem, 3.5rem);
+    @include build-image("../../public/images/next-btn.svg", 2.5rem, 2.5rem);
     body.dark-theme & {
         @include build-image("../../public/images/dark-theme/next-btn-dark-mode.svg", 2.5rem, 2.5rem);
     }

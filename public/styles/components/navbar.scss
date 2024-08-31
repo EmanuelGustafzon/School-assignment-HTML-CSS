@@ -53,9 +53,9 @@
     .burger-menu {
         border-width: 0;
         background-color: transparent;
-        @include build-image('/public/images/burger-menu.svg', 31px, 36px);
+        @include build-image('../../images/burger-menu.svg', 31px, 36px);
         body.dark-theme & {
-            @include build-image('/public/images/dark-theme/burger-menu-dark-theme.svg', 31px, 36px);
+            @include build-image('../../images/dark-theme/burger-menu-dark-theme.svg', 31px, 36px);
         }
     }
 }
