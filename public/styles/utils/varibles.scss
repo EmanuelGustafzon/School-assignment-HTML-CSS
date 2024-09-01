@@ -13,6 +13,7 @@ $gray-900:#0B0F19;
 $brand-primary: #6366F1;
 // White Color
 $white: #fff;
+$white-70: rgba(250, 250, 250, 70);
 
 // TYPOGRAPHY
 $font-stack: 'Manrope', Helvetica, sans-serif;
@@ -27,12 +28,12 @@ $display-4: $font-extra-bold 3.5rem $font-stack;
 $display-5: $font-extra-bold 3rem $font-stack;
 $display-6: $font-extra-bold 2.5rem $font-stack;
 
-$heading-1: 2.5rem $font-stack;
-$heading-2: 2rem $font-stack;
-$heading-3: 1.75rem $font-stack;
-$heading-4: 1.5rem $font-stack;
-$heading-5: 1.5rem $font-stack;
-$heading-6: 1rem $font-stack;
+$heading-1: $font-bold 2.5rem $font-stack;
+$heading-2: $font-bold 2rem $font-stack;
+$heading-3: $font-bold 1.75rem $font-stack;
+$heading-4: $font-bold 1.5rem $font-stack;
+$heading-5: $font-bold 1.5rem $font-stack;
+$heading-6: $font-bold 1rem $font-stack;
 
 //Body Text
 $lead-text: $font-bold 1.5rem $font-stack; 

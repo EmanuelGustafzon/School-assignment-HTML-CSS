@@ -12,6 +12,13 @@ a {
     font: $m-text;
     text-decoration: none;
 }
+p {
+    font: $l-text;
+    color: $gray-700;
+    body.dark & {
+        color: $white-70;
+    }
+}
 .dark-theme {
     background-color: $gray-900;
     color: $white;
