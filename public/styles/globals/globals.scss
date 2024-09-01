@@ -1,0 +1,29 @@
+@import '../utils/varibles.scss';
+@import '../utils/mixins.scss';
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+body {
+    font-family: $font-stack;
+}
+a {
+    font: $m-text;
+    text-decoration: none;
+}
+.dark-theme {
+    background-color: $gray-900;
+    color: $white;
+    a {
+        color: $white;
+    }
+}
+.light-theme {
+    background-color: $white;
+    color: $gray-900;
+
+    a {
+        color: $gray-900;
+    }
+}

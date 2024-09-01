@@ -29,7 +29,7 @@
     margin-left: 5px;
     color: $gray-900;
     body.dark-theme & {
-        color: white;
+        color: $white;
     }
     font: $l-text;
 }
@@ -43,6 +43,9 @@
 .features-link:hover {
     color: $brand-primary;
 }
+.burger-menu {
+    display: none;
+}
 
 @media (max-width: 1200px) {
     .features-link, .signin {
@@ -52,6 +55,7 @@
         margin-right: 100px;
     }
     .burger-menu {
+        display: block;
         border-width: 0;
         background-color: transparent;
         @include build-image('.././images/burger-menu.svg', 31px, 36px);
