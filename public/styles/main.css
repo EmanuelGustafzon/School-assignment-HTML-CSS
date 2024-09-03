@@ -17,11 +17,11 @@ ul {
 }
 
 p {
-  font: 500 1rem "Manrope", Helvetica, sans-serif;
+  font: 500 1.125rem "Manrope", Helvetica, sans-serif;
   color: #565973;
 }
-body.dark p {
-  color: rgb(250, 250, 250);
+body.dark-theme p {
+  color: rgba(250, 250, 250, 0.7);
 }
 
 .dark-theme {
@@ -142,7 +142,7 @@ body.dark p {
 .logo-name {
   margin-left: 5px;
   color: #0B0F19;
-  font: 700 1.125rem "Manrope", Helvetica, sans-serif;
+  font: 500 1.125rem "Manrope", Helvetica, sans-serif;
 }
 body.dark-theme .logo-name {
   color: #fff;
@@ -434,6 +434,8 @@ body.dark-theme .down-arrow-image {
 }
 .slider {
   background-color: #F3F6FF;
+  display: grid;
+  align-items: center;
   text-align: center;
 }
 body.dark-theme .slider {
@@ -471,8 +473,12 @@ body.dark-theme .slider {
   .left-image, .right-image {
     display: none;
   }
+  .slider-images {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .center-image {
-    width: 50%;
+    width: 80%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -489,16 +495,12 @@ body.dark-theme .slider {
 }
 
 .transfers, .international-payments {
-  width: 80%;
-  margin-left: 10%;
   display: grid;
+  place-items: center;
+  gap: 1;
   grid-template-columns: 50% 50%;
-  align-items: center;
 }
 
-.transfers-information {
-  width: 70%;
-}
 .transfers-information li {
   margin-bottom: 10px;
 }

@@ -9,14 +9,12 @@
     }
 }
 .transfers, .international-payments {
-    width: 80%;
-    margin-left: 10%;
     display: grid;
+    place-items: center;
+    gap: 1;
     grid-template-columns: 50% 50%;
-    align-items: center;
 }
 .transfers-information {
-    width: 70%;
     li {
         margin-bottom: 10px;
     }

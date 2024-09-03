@@ -13,7 +13,7 @@ $gray-900:#0B0F19;
 $brand-primary: #6366F1;
 // White Color
 $white: #fff;
-$white-70: rgba(250, 250, 250, 70);
+$white-70: rgba(250, 250, 250, 70%);
 $white-05: rgba(250, 250, 250, 5%);
 
 // TYPOGRAPHY
@@ -39,7 +39,7 @@ $heading-6: $font-bold 1rem $font-stack;
 //Body Text
 $lead-text: $font-bold 1.5rem $font-stack; 
 $xl-text: $font-bold 1.25rem $font-stack; 
-$l-text: $font-bold 1.125rem $font-stack; 
+$l-text: $font-normal 1.125rem $font-stack; 
 $m-text: $font-normal 1rem $font-stack; 
 $s-text: $font-normal 0.875rem $font-stack; 
 $xs-text: $font-normal 0.75rem $font-stack; 

@@ -17,11 +17,11 @@ ul {
 }
 
 p {
-  font: 500 1rem "Manrope", Helvetica, sans-serif;
+  font: 500 1.125rem "Manrope", Helvetica, sans-serif;
   color: #565973;
 }
-body.dark p {
-  color: rgb(250, 250, 250);
+body.dark-theme p {
+  color: rgba(250, 250, 250, 0.7);
 }
 
 .dark-theme {

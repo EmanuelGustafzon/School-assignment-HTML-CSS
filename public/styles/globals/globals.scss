@@ -16,9 +16,9 @@ ul {
     list-style-type: none;
 }
 p {
-    font: $m-text;
+    font: $l-text;
     color: $gray-700;
-    body.dark & {
+    body.dark-theme & {
         color: $white-70;
     }
 }
