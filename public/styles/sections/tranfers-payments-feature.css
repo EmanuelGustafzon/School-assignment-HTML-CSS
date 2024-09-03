@@ -1,0 +1,42 @@
+.feature-tranfers-and-payments {
+  padding-top: 40px;
+}
+.feature-tranfers-and-payments h2 {
+  width: 80%;
+  margin-bottom: 20px;
+}
+.feature-tranfers-and-payments button {
+  margin-top: 20px;
+}
+
+.transfers, .international-payments {
+  width: 80%;
+  margin-left: 10%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+.transfers-information {
+  width: 70%;
+}
+.transfers-information li {
+  margin-bottom: 10px;
+}
+.transfers-information span {
+  margin-left: 10px;
+}
+
+.payments-grid {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  .feature-tranfers-and-payments {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=tranfers-payments-feature.css.map */

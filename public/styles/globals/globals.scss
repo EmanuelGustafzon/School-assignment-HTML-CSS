@@ -12,8 +12,11 @@ a {
     font: $m-text;
     text-decoration: none;
 }
+ul {
+    list-style-type: none;
+}
 p {
-    font: $l-text;
+    font: $m-text;
     color: $gray-700;
     body.dark & {
         color: $white-70;

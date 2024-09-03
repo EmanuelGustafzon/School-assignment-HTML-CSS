@@ -1,0 +1,9 @@
+.icon-background {
+  background-color: #F3F6FF;
+  border-radius: 10px;
+}
+body.dark-theme .icon-background {
+  background-color: rgba(250, 250, 250, 0.05);
+}
+
+/*# sourceMappingURL=icon-background.css.map */
