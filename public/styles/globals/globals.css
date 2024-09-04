@@ -17,7 +17,7 @@ ul {
 }
 
 p {
-  font: 500 1.125rem "Manrope", Helvetica, sans-serif;
+  font: 500 1rem "Manrope", Helvetica, sans-serif;
   color: #565973;
 }
 body.dark-theme p {

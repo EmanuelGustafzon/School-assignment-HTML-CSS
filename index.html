@@ -10,33 +10,34 @@
     <title>Document</title>
 </head>
 <body class="light-theme">
-    <nav class="navbar">
-        <div class="nav-left">
-            <a href="/" class="logo-link">
-                <img src="public/images/logo.svg" alt="logo">
-            </a>
-            <span class="logo-name">Sillicon</span>
-            <a href="/" class="features-link">Features</a>
-        </div>
-        
-        <div class="nav-right">
-            <span class="theme-text">Dark Mode</span>
-            <label class="toggle-container">
-                <input 
-                    onclick="(function() {
-                    const bodyElement = document.getElementsByTagName('body')[0];
-                    bodyElement.className === 'light-theme' ? bodyElement.className = 'dark-theme' : bodyElement.className = 'light-theme'; 
-                    }())"
-                    type="checkbox" id="theme-checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <button class="btn btn-primary signin">
-                Sign in / up
-            </button>
-            <button class="burger-menu"></button>
-        </div>
-
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="/" class="logo-link">
+                    <img src="public/images/logo.svg" alt="logo">
+                </a>
+                <span class="logo-name">Sillicon</span>
+                <a href="/" class="features-link">Features</a>
+            </div>
+            
+            <div class="nav-right">
+                <span class="theme-text">Dark Mode</span>
+                <label class="toggle-container">
+                    <input 
+                        onclick="(function() {
+                        const bodyElement = document.getElementsByTagName('body')[0];
+                        bodyElement.className === 'light-theme' ? bodyElement.className = 'dark-theme' : bodyElement.className = 'light-theme'; 
+                        }())"
+                        type="checkbox" id="theme-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <button class="btn btn-primary signin">
+                    Sign in / up
+                </button>
+                <button class="burger-menu"></button>
+            </div>
+        </nav>
+    </header>
 
     <div class="banner">
         <div class="banner-wrapper">
@@ -161,7 +162,57 @@
             </div>
         </div>
     </section>
+    <section class="testamonials">
+        <div class="testamonials-wrapper">
+            <h2 class="testamonials-heading">
+                Clients are Loving Our App
+            </h2>
+                <div class="testamonials-card">
+                    <div class="citat-img">
+                        <img src="public/images/quotes.svg" alt="quotes">
+                    </div>
+                    <div class="stars">
+                        <img src="public/images/star.svg" alt="star">
+                        <img src="public/images/star.svg" alt="star">
+                        <img src="public/images/star.svg" alt="star">
+                        <img src="public/images/star.svg" alt="star">
+                        <img src="public/images/star-not-filled.svg" alt="star">
+                    </div>
+                    <p class="testamonials-content">
+                        Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.
+                    </p>
+                    <div class="testamonials-person">
+                        <img src="public/images/fannie-testamonial.svg" alt="Fannie image">
+                        <div class="name-and-title">
+                            <p class="name">Fannie Summers</p>
+                            <p class="title">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testamonials-card">
+                    <div class="citat-img">
+                        <img src="public/images/quotes.svg" alt="quotes">
+                    </div>
+                    <div class="stars">
+                        <img src="public/images/star.svg" alt="star">
+                        <img src="public/images/star.svg" alt="star">
+                        <img src="public/images/star.svg" alt="star">
+                        <img src="public/images/star.svg" alt="star">
+                        <img src="public/images/star.svg" alt="star">
+                    </div>
+                    <p class="testamonials-content">
+                        Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.                    </p>
+                    <div class="testamonials-person">
+                        <img src="public/images/albert-testamonial.svg" alt="Fannie image">
+                        <div class="name-and-title">
+                            <p class="name">Albert Flores</p>
+                            <p class="title">Developer</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
 
+    </section>
     <div style="height: 1000px;"></div>
     <footer class="footer"></footer>
 </body>
