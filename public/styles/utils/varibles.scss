@@ -11,6 +11,8 @@ $gray-800:#33354D;
 $gray-900:#0B0F19;
 // brand color
 $brand-primary: #6366F1;
+// notifications
+$success: #22C55E;
 // White Color
 $white: #fff;
 $white-70: rgba(250, 250, 250, 70%);
@@ -46,5 +48,9 @@ $xs-text: $font-normal 0.75rem $font-stack;
 
 // Navigation
 $navigation: $font-bold 1rem $font-stack;
+
+// shadows 
+$s-shadow: 0 1px 5px rgba(61, 56, 56, 0.2);
+$brand-shadow: 0 1px 6px $brand-primary;
 
 

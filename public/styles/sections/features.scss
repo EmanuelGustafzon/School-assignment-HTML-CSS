@@ -2,11 +2,12 @@
 
 .features {
     display: grid;
-    grid-template-columns: 40% 60%;
-    padding-top: 40px;
+    max-width: 1340px;
+    margin: auto auto;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 20px;
 }
 .features-container {
-    margin-right: 50px;
     h2 {
         font: $heading-1;
         margin-bottom: 10px;
@@ -19,10 +20,6 @@
         margin-bottom: 50px;
     }
 }
-.features-iphone-image {
-    margin-left: 50px;
-    margin-right: 25px;
-}
 .features-grid {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -30,28 +27,19 @@
 .features-card {
     display: grid;
     grid-template-columns: 20% 80%;
-    margin-bottom: 5px;
+    row-gap: 5px;
 }
 
-@media (max-width: 1200px) {
-    .features-iphone-image {
-        display: none;
-    }
+@media (max-width: 1340px) {
     .features {
         display: block;
-    }
-    .features-container {
-        margin-right: 0;
+        max-width: 720px;
     }
     .features-heading, .features-description {
         text-align: center;
     }
     .features-grid {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .features-card-text-container {
-        margin-left: 10px;
+        column-gap: 30px;
     }
     .features-iphone-image {
         display: none;

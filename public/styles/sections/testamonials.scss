@@ -1,15 +1,16 @@
 .testamonials {
     background-color: $gray-100;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 20px;
     body.dark-theme & {
         background-color: $white-05;
     }
 }
 .testamonials-wrapper {
+    max-width: 1340px;
+    margin: auto auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
+    gap: 14px;
 }
 .testamonials-heading {
     align-self: start; 
@@ -67,5 +68,11 @@
         body-dark-theme & {
             color: $white-70;
         }
+    }
+}
+
+@media (max-width: 1340px) {
+    .testamonials {
+        display: none;
     }
 }

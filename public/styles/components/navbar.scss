@@ -1,23 +1,30 @@
 @import './toggle.scss';
 @import './buttons.scss';
 @import '../utils/mixins.scss';
+
+header {
+    body.dark-theme & {
+        background-color: rgba(241,244,253,0.07);
+    }
+}
 .navbar {
-    position: absolute;
+    position: sticky;
     top: 0;
-    width: 100%;
+    max-width: 1340px;
+    margin: auto auto;
+    padding-left: 20px;
+    padding-right: 20px;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .nav-left {
-    margin-left: 50px;
     display: flex;
     align-items: center;
 }
 
 .nav-right {
-    margin-right: 50px;
     display: flex;
     align-items: center;
     label {
@@ -26,12 +33,12 @@
     }
 }
 .logo-name {
-    margin-left: 5px;
     color: $gray-900;
     body.dark-theme & {
         color: $white;
     }
-    font: $l-text;
+    font: $xl-text;
+    margin-left: 5px;
 }
 .signin {
     margin-left: 70px;
@@ -47,7 +54,10 @@
     display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1340px) {
+    .navbar {
+        max-width: 720px;
+    }
     .features-link, .signin {
         display: none;
     }
@@ -66,8 +76,8 @@
 }
 
 @media (max-width: 720px) {
-    .nav-left {
-        margin-left: 20px;
+    .navbar {
+        width: 100%;
     }
     .theme-text {
         display: none;

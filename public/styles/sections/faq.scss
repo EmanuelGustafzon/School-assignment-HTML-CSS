@@ -1,0 +1,109 @@
+.faq {
+    max-width: 1340px;
+    margin: auto auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 60px 1fr;
+    grid-template-areas: 
+    'heading accordions'
+    'description accordions'
+    'contact accordions';
+}
+.faq-heading {
+    grid-area: heading;
+}
+.faq-description  {
+    grid-area: description;
+}
+.contact {
+    grid-area: contact;
+    display: flex;
+    gap: 10px;
+}
+.contact-card {
+    height: 200px;
+    width: 200px;
+    border: 1px solid $gray-300;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 20px;
+    padding-left: 20px;
+}
+#contact-phone {
+    color: $brand-primary;
+    padding-right: 20px;
+    font: $l-text;
+}
+#contact-phone-arrow {
+    color: $brand-primary;
+}
+#contact-sms {
+    color: $success;
+    padding-right: 20px;
+    font: $l-text;
+}
+#contact-sms-arrow {
+    color: $success;
+}
+.accordions {
+    grid-area: accordions;
+}
+.accordion {
+    border-radius: 8px;
+    box-shadow: $s-shadow;
+    padding-left: 20px;
+    padding-right: 20px;
+    body.dark-theme & {
+        background-color: $white-05;
+    }
+}
+.question-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+.question {
+    flex: flex-start;
+}
+.arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-100;
+    color: $gray-800;
+    body.dark-theme & {
+        background-color: $white-05;
+        color: $white;
+    }
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border-width: 0;
+}
+.answer {
+    padding: 24px 24px;
+    p {
+        font: $s-text;
+        color: $gray-700;
+    }
+}
+.hidden {
+    display: none;
+
+}
+.active {
+    .arrow {
+        transform: rotateX(180deg);
+    }
+    background-color: $brand-primary;
+    body.dark-theme & {
+        background-color: $brand-primary;
+        box-shadow: $brand-shadow; 
+    }
+    color: $white;
+}

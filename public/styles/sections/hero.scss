@@ -4,20 +4,22 @@
 .banner {
     background-image: linear-gradient(350deg,rgba(99,102,241,0.15) 0%, rgba(218,70,239,0.07) 42%, rgba(241,244,253,0.07) 83%);
     height: auto;
-    padding-top: 150px;
-    overflow: hidden;
+    padding-top: 100px;
 }
 .banner-wrapper {
     overflow: hidden;
     height: 600px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1340px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto auto;
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 30% auto;
     grid-template-areas: 
         'heading img'
         'content img';
+    column-gap: 80px;
 }
 .banner-heading {
     font: $display-4;
@@ -28,8 +30,7 @@
 }
 .banner-phone-image {
     grid-area: img;
-    width: 40em;
-    float: right;
+    width: 650px;
 }
 .banner-text {
     margin-bottom: 3em;
@@ -39,19 +40,19 @@
 }
 .banner-market-appstore {
     border: none;
-    margin-right: 20px;
+    margin-right: 10px;
     border-radius: 10px;
-    @include build-image("../../public/images/appstore.svg", 170px, 52px);
+    @include build-image("../../public/images/appstore.svg", 165px, 52px);
     body.dark-theme & {
-        @include build-image("../../public/images/dark-theme/appstore-dark-theme.svg", 170px, 52px);
+        @include build-image("../../public/images/dark-theme/appstore-dark-theme.svg", 165px, 52px);
     }
 }
 .banner-market-googleplay {
     border: none;
     border-radius: 10px;
-    @include build-image("../../public/images/googleplay.svg", 170px, 52px);
+    @include build-image("../../public/images/googleplay.svg", 165px, 52px);
     body.dark-theme & {
-        @include build-image("../../public/images/dark-theme/googleplay-dark-theme.svg", 170px, 52px);
+        @include build-image("../../public/images/dark-theme/googleplay-dark-theme.svg", 165px, 52px);
     }
 }
 .banner-scroll-to-discover {
@@ -72,11 +73,14 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1340px) {
     .banner-wrapper {
+        width: 720px;
+        height: 520px;
         grid-template-areas: 
             'heading heading'
             'content img';
+        column-gap: 20px;
     }
     .banner-heading {
         font: $display-5;
@@ -84,28 +88,22 @@
         grid-area: heading;
     }
     .banner-phone-image {
-        width:30em;
+        width:380px;
     }
 }
 
-@media (max-width: 1000px) {
-    .banner-heading {
-        font: $display-6;
-        justify-self: center;
-        grid-area: heading;
-    }
-}
-
-@media (max-width: 820px) {
+@media (max-width: 720px) {
     .banner-wrapper {
         display: block;
+        width: 100%;
         height: 550px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .banner-heading {
         text-align: center;
-        margin-bottom: 1.5em;
+        font: $display-6;
+        margin-bottom: 1em;
     }
     .banner-text {
         text-align: center;
@@ -121,10 +119,5 @@
     }
     .banner-phone-image {
        display: none;
-    }
-}
-@media (max-width: 370px) {
-    .banner-market-appstore {
-        margin: 0;
     }
 }
