@@ -25,17 +25,16 @@
                 <span class="theme-text">Dark Mode</span>
                 <label class="toggle-container">
                     <input 
-                        onclick="(function() {
-                        const bodyElement = document.getElementsByTagName('body')[0];
-                        bodyElement.className === 'light-theme' ? bodyElement.className = 'dark-theme' : bodyElement.className = 'light-theme'; 
-                        }())"
+                        onclick="toggleTheme()"
                         type="checkbox" id="theme-checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <button class="btn btn-primary signin">
+                <button class="btn btn-brand btn-medium signin">
                     Sign in / up
                 </button>
-                <button class="burger-menu"></button>
+                <button class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
     </header>
@@ -48,8 +47,24 @@
                         Save, spend & manage money in your pocket.
                     </p>
                     <div class="banner-market">
-                        <a href="https://www.apple.com/se/app-store/" target="_blank" class="banner-market-appstore"></a>
-                        <a href="https://play.google.com/store/games?device=windows&pli=1" target="_blank" class="banner-market-googleplay"></a>
+                        <a href="https://www.apple.com/se/app-store/" target="_blank" class="btn btn-primary btn-small market-btn">
+                            <div>
+                                <i class="fab fa-apple"></i>
+                            </div>
+                            <div>
+                                <p class="download">Download on the</p>
+                                <p class="store">App Store</p>
+                            </div>
+                        </a>
+                        <a href="https://play.google.com/store/games?device=windows&pli=1" target="_blank" class="btn btn-primary btn-small market-btn">
+                            <div>
+                                <img class="google-play" src="public/images/google-play.svg">
+                            </div>
+                            <div>
+                                <p class="download">GET IT ON</p>
+                                <p class="store">Google Play</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="banner-scroll-to-discover">
                         <div class="down-arrow-image"></div>
@@ -135,7 +150,7 @@
                     <li><img src="public/images/check-circle-icon.svg" alt="checkbox"><span>No monthly cash commission</span></li>
                     <li><img src="public/images/check-circle-icon.svg" alt="checkbox"><span>Manage payments and transactions online</span></li>
                 </ul>
-                <button class="btn btn-primary">Learn more -></button>
+                <button class="btn btn-brand btn-medium">Learn more -></button>
             </div>
             <div class="transfers-image">
                 <img src="public/images/transfer-money.svg" alt="simple transfer with sillicon app">
@@ -157,7 +172,7 @@
                         <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
                     </div>
                 </div>
-                <button class="btn btn-primary">Learn more -></button> 
+                <button class="btn btn-brand btn-medium">Learn more -></button> 
             </div>
         </div>
     </section>
@@ -306,6 +321,13 @@
 
 </body>
 <script>
+    const toggleTheme= () => {
+        const bodyElement = document.getElementsByTagName('body')[0];
+        bodyElement.className === 'light-theme' ? 
+            bodyElement.className = 'dark-theme' 
+            : bodyElement.className = 'light-theme'; 
+        };
+
     const arrowBtns = document.getElementsByClassName('arrow-btn');
     const answers = document.getElementsByClassName('answer');
     for(let i = 0; i < arrowBtns.length; i++) {

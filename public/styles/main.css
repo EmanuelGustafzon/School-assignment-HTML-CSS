@@ -3,12 +3,27 @@
   padding: 0;
 }
 
+:root {
+  --bg-primary:#fff;
+  --bg-secondary:#F3F6FF;
+  --color: #0B0F19;
+}
+
+body.dark-theme {
+  --bg-primary: #0B0F19;
+  --bg-secondary:rgba(250, 250, 250, 0.05);
+  --color: #fff;
+}
+
 body {
   font-family: "Manrope", Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--color);
 }
 
 a {
   font: 500 1rem "Manrope", Helvetica, sans-serif;
+  color: var(--color);
   text-decoration: none;
 }
 
@@ -18,26 +33,6 @@ ul {
 
 p {
   font: 500 1rem "Manrope", Helvetica, sans-serif;
-  color: #565973;
-}
-body.dark-theme p {
-  color: rgba(250, 250, 250, 0.7);
-}
-
-.dark-theme {
-  background-color: #0B0F19;
-  color: #fff;
-}
-.dark-theme a {
-  color: #fff;
-}
-
-.light-theme {
-  background-color: #fff;
-  color: #0B0F19;
-}
-.light-theme a {
-  color: #0B0F19;
 }
 
 .toggle-container {
@@ -99,18 +94,37 @@ body.dark-theme p {
 }
 
 .btn {
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
   border-width: 0;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
-.btn-primary {
+.btn-small {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.btn-medium {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+}
+
+.btn-brand {
   background-color: #6366F1;
   color: #fff;
   font: 500 0.875rem "Manrope", Helvetica, sans-serif;
+}
+
+.btn-primary {
+  background-color: #0B0F19;
+  color: #fff;
+}
+body.dark-theme .btn-primary {
+  background-color: #F3F6FF;
+  color: #33354D;
 }
 
 body.dark-theme header {
@@ -145,12 +159,8 @@ body.dark-theme header {
 }
 
 .logo-name {
-  color: #0B0F19;
   font: 700 1.25rem "Manrope", Helvetica, sans-serif;
   margin-left: 5px;
-}
-body.dark-theme .logo-name {
-  color: #fff;
 }
 
 .signin {
@@ -182,20 +192,10 @@ body.dark-theme .logo-name {
   }
   .burger-menu {
     display: block;
+    font-size: 1.5em;
+    color: var(--color);
     border-width: 0;
     background-color: transparent;
-    background-image: url(.././images/burger-menu.svg);
-    background-size: cover;
-    background-position: center;
-    width: 31px;
-    height: 36px;
-  }
-  body.dark-theme .burger-menu {
-    background-image: url(.././images/dark-theme/burger-menu-dark-theme.svg);
-    background-size: cover;
-    background-position: center;
-    width: 31px;
-    height: 36px;
   }
 }
 @media (max-width: 720px) {
@@ -260,41 +260,26 @@ body.dark-theme .icon-background {
 
 .banner-market {
   display: flex;
+  column-gap: 5px;
 }
 
-.banner-market-appstore {
-  border: none;
-  margin-right: 10px;
-  border-radius: 10px;
-  background-image: url(../../public/images/appstore.svg);
-  background-size: cover;
-  background-position: center;
-  width: 165px;
-  height: 52px;
-}
-body.dark-theme .banner-market-appstore {
-  background-image: url(../../public/images/dark-theme/appstore-dark-theme.svg);
-  background-size: cover;
-  background-position: center;
-  width: 165px;
-  height: 52px;
+.market-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
 }
 
-.banner-market-googleplay {
-  border: none;
-  border-radius: 10px;
-  background-image: url(../../public/images/googleplay.svg);
-  background-size: cover;
-  background-position: center;
-  width: 165px;
-  height: 52px;
+.fa-apple {
+  font-size: 2.45em;
 }
-body.dark-theme .banner-market-googleplay {
-  background-image: url(../../public/images/dark-theme/googleplay-dark-theme.svg);
-  background-size: cover;
-  background-position: center;
-  width: 165px;
-  height: 52px;
+
+.download {
+  font: 500 0.75rem "Manrope", Helvetica, sans-serif;
+}
+
+.store {
+  font: 700 1rem "Manrope", Helvetica, sans-serif;
 }
 
 .banner-scroll-to-discover {
@@ -420,13 +405,10 @@ body.dark-theme .down-arrow-image {
   }
 }
 .slider {
-  background-color: #F3F6FF;
+  background-color: var(--bg-secondary);
   display: grid;
   align-items: center;
   text-align: center;
-}
-body.dark-theme .slider {
-  background-color: rgba(250, 250, 250, 0.05);
 }
 .slider h2 {
   font: 700 2.5rem "Manrope", Helvetica, sans-serif;
@@ -509,11 +491,8 @@ body.dark-theme .slider {
   }
 }
 .testamonials {
-  background-color: #F3F6FF;
+  background-color: var(--bg-secondary);
   padding: 50px 20px;
-}
-body.dark-theme .testamonials {
-  background-color: rgba(250, 250, 250, 0.05);
 }
 
 .testamonials-wrapper {
@@ -678,7 +657,7 @@ body.dark-theme .accordion {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F3F6FF;
+  background-color: var(--bg-secondary);
   color: #33354D;
   height: 36px;
   width: 36px;
@@ -686,7 +665,6 @@ body.dark-theme .accordion {
   border-width: 0;
 }
 body.dark-theme .arrow-btn {
-  background-color: rgba(250, 250, 250, 0.05);
   color: #fff;
 }
 

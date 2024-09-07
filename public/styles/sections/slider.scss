@@ -1,8 +1,5 @@
 .slider {
-    background-color: $gray-100;
-    body.dark-theme & {
-        background-color: $white-05;
-    }
+    background-color: var(--bg-secondary);
     display: grid;
     align-items: center;
     text-align: center;

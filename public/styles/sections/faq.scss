@@ -74,10 +74,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $gray-100;
+    background-color: var(--bg-secondary);
     color: $gray-800;
     body.dark-theme & {
-        background-color: $white-05;
         color: $white;
     }
     height: 36px;

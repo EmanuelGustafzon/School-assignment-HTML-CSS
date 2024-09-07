@@ -4,7 +4,7 @@
 
 header {
     body.dark-theme & {
-        background-color: rgba(241,244,253,0.07);
+        background-color: rgba(241,244,253,0.07); // bug with banner not overlapping banner
     }
 }
 .navbar {
@@ -33,10 +33,6 @@ header {
     }
 }
 .logo-name {
-    color: $gray-900;
-    body.dark-theme & {
-        color: $white;
-    }
     font: $xl-text;
     margin-left: 5px;
 }
@@ -66,12 +62,10 @@ header {
     }
     .burger-menu {
         display: block;
+        font-size: 1.5em;
+        color: var(--color);
         border-width: 0;
         background-color: transparent;
-        @include build-image('.././images/burger-menu.svg', 31px, 36px);
-        body.dark-theme & {
-            @include build-image('.././images/dark-theme/burger-menu-dark-theme.svg', 31px, 36px);
-        }
     }
 }
 

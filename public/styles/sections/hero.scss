@@ -37,23 +37,22 @@
 }
 .banner-market {
     display: flex;
+    column-gap: 5px;
 }
-.banner-market-appstore {
-    border: none;
-    margin-right: 10px;
-    border-radius: 10px;
-    @include build-image("../../public/images/appstore.svg", 165px, 52px);
-    body.dark-theme & {
-        @include build-image("../../public/images/dark-theme/appstore-dark-theme.svg", 165px, 52px);
-    }
+.market-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
 }
-.banner-market-googleplay {
-    border: none;
-    border-radius: 10px;
-    @include build-image("../../public/images/googleplay.svg", 165px, 52px);
-    body.dark-theme & {
-        @include build-image("../../public/images/dark-theme/googleplay-dark-theme.svg", 165px, 52px);
-    }
+.fa-apple {
+    font-size: 2.45em;
+}
+.download {
+    font: $xs-text;
+}
+.store {
+    font: $heading-6;
 }
 .banner-scroll-to-discover {
     margin-top: 8em;
