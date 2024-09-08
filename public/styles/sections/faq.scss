@@ -106,3 +106,40 @@
     }
     color: $white;
 }
+.contact-btn-mobile {
+    display: none;
+}
+
+
+@media (max-width: 1340px) {
+    .faq {
+        max-width: 720px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: 
+        'heading heading'
+        'description description'
+        'accordions accordions'
+        'contact contact';
+        row-gap: 24px;
+    }
+    .faq-heading, .faq-description {
+        justify-self: center;
+    }
+    .contact-card {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .contact-btn-mobile {
+        display: grid;
+    }
+    .contact {
+        justify-self: center;
+    }
+    .contact-card {
+        display: none;
+    }
+}

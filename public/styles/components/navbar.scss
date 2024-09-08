@@ -2,63 +2,53 @@
 @import './buttons.scss';
 @import '../utils/mixins.scss';
 
-header {
-    body.dark-theme & {
-        background-color: rgba(241,244,253,0.07); // bug with banner not overlapping banner
-    }
-}
-.navbar {
-    position: sticky;
-    top: 0;
+.nav-wrapper {
     max-width: 1340px;
-    margin: auto auto;
-    padding-left: 20px;
-    padding-right: 20px;
     height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.nav-left {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 32px;
+    margin: auto auto;
     align-items: center;
 }
-
-.nav-right {
+.logo-link {
     display: flex;
     align-items: center;
-    label {
-        margin-bottom: 24px;
-        margin-left: 10px;
-    }
+    column-gap: 12px;
 }
 .logo-name {
     font: $xl-text;
-    margin-left: 5px;
 }
-.signin {
-    margin-left: 70px;
-}
-.features-link { 
-    margin-left: 20px ;
+.links { 
     font: $navigation;
 }
-.features-link:hover {
+.nav-link:hover {
     color: $brand-primary;
 }
+
+.theme-settings-wrapper {
+    display: flex;
+    column-gap: 12px;
+}
+.signin {
+    margin-left: 32px;
+}
+.fa-user {
+    padding-right: 8px;
+}
+
 .burger-menu {
     display: none;
 }
 
 @media (max-width: 1340px) {
-    .navbar {
+    .nav-wrapper {
         max-width: 720px;
+        grid-template-columns: 1fr auto auto;
+        gap: 76px;
     }
-    .features-link, .signin {
+    .links, .signin {
         display: none;
-    }
-    .toggle-container {
-        margin-right: 100px;
     }
     .burger-menu {
         display: block;
@@ -70,16 +60,16 @@ header {
 }
 
 @media (max-width: 720px) {
-    .navbar {
-        width: 100%;
+    .nav-wrapper {
+        max-width: 100%;
+        gap: 64px;
+        padding-right: 24px;
+        padding-left: 12px;
+    }
+    .theme-settings-wrapper {
+        margin-bottom: 24px;
     }
     .theme-text {
         display: none;
-    }
-    .toggle-container {
-        margin-right: 60px;
-    }
-    .nav-right {
-        margin-right: 20px;
     }
 }

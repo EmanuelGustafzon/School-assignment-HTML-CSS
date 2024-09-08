@@ -12,16 +12,17 @@
 </head>
 <body class="light-theme">
     <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <a href="/" class="logo-link">
-                    <img src="public/images/logo.svg" alt="logo">
-                </a>
+        <div class="nav-wrapper">
+            <a href="/" class="logo-link">
+                <img src="public/images/logo.svg" alt="logo-img">
                 <span class="logo-name">Sillicon</span>
-                <a href="/" class="features-link">Features</a>
-            </div>
-            
-            <div class="nav-right">
+            </a>
+
+            <nav class="links">
+                <a href="/" class="nav-link">Features</a>
+            </nav>
+
+            <div class="theme-settings-wrapper">
                 <span class="theme-text">Dark Mode</span>
                 <label class="toggle-container">
                     <input 
@@ -29,14 +30,16 @@
                         type="checkbox" id="theme-checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <button class="btn btn-brand btn-medium signin">
-                    Sign in / up
-                </button>
-                <button class="burger-menu">
-                    <i class="fas fa-bars"></i>
-                </button>
             </div>
-        </nav>
+
+            <a class="btn btn-brand btn-medium signin">
+                <i class="far fa-user"></i>
+                Sign in / up
+            </a>
+            <button class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </header>
 
     <div class="banner">
@@ -132,15 +135,19 @@
         </div>
     </section>
     <section class="slider">
-        <h2>How Does It Work</h2>
-        <div class="slider-images">
-                <img class="left-image" src="public/images/slider-iphone-1.svg" alt="Sillicon app my budget">
-                <img class="center-image" src="public/images/slider-iphone-2.svg" alt="Sillicon app my credit cards">
-                <img class="right-image" src="public/images/slider-iphone-3.svg" alt="Sillicon app my transactions">
+        <div class="slider-wrapper">
+            <h2>How Does It Work</h2>
+            <div class="slider-images">
+                    <img class="left-image" src="public/images/slider-iphone-1.svg" alt="Sillicon app my budget">
+                    <img class="center-image" src="public/images/slider-iphone-2.svg" alt="Sillicon app my credit cards">
+                    <img class="right-image" src="public/images/slider-iphone-3.svg" alt="Sillicon app my transactions">
+            </div>
+            <h3>Latest Transaction History</h3>
+            <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
+            </div>
         </div>
-        <h3>Latest Transaction History</h3>
-        <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
     </section>
+
     <section class="feature-tranfers-and-payments">
         <div class="transfers">
             <div class="transfers-information">
@@ -176,6 +183,7 @@
             </div>
         </div>
     </section>
+
     <section class="testamonials">
         <div class="testamonials-wrapper">
             <h2 class="testamonials-heading">
@@ -226,6 +234,7 @@
             </div>
         </div>
     </section>
+
     <section class="faq">
         <h2 class="faq-heading">Any questions? Check out the FAQs</h2>
         <p class="faq-description ">Still have unanswered questions and need to get in touch?</p>
@@ -246,6 +255,8 @@
                     <i id="contact-sms-arrow" class="fas fa-arrow-right"></i>
                 </div>
             </div>
+            <!-- mobile contact -->
+            <button class="contact-btn-mobile btn btn-brand btn-large">Contact Us Now</button>
         </div>
         <div class="accordions">
             <div class="accordion">
@@ -316,6 +327,7 @@
             </div>
         </div>
     </section>
+
     <div style="height: 1000px;"></div>
     <footer class="footer"></footer>
 
