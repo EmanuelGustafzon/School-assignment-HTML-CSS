@@ -5,29 +5,82 @@
     margin: auto auto;
     display: flex;
     justify-content: center; 
-    
 }
 .subscribe-wrapper {
     display: grid;
-    grid-template-columns: auto 362px 1fr;
-    column-gap: 10px;
+    grid-template-columns: auto auto 1fr;
+    column-gap: 24px;
     align-items: center;
+    p, span {
+        font: $heading-4;
+    }
     form {
-      display: flex;
-      align-items: center;  
+        display: flex;
+        align-items: center; 
+        border-radius: 8px;
     }
     input {
-        height: 2em;
-        border-color: $gray-400;
+        background-color: var(--bg-secondary);
+        height: 2.9em;
+        width: 15em;
+        padding-left: 1em;
+        border: 1px solid var(--border-color);
         color: $gray-500;
         font: $m-text;
         border-top-left-radius: 8px; 
         border-bottom-left-radius: 8px;
     }
     button {
-        height: 2.5em;
-        width: 5em;
-        border-top-left-radius: 0px; 
-        border-bottom-left-radius: 0px; 
+        height: 3.5em;
+        width: 10em;
+        padding-left: 2em;
+        padding-right: 2em;
+        border-width: 0;
+        border-top-right-radius: 8px; 
+        border-bottom-right-radius: 8px;
+    }
+}
+
+@media (max-width: 1340px) {
+    .subscribe {
+        max-width: 720px;
+    }
+    #subscribe-text-2, #subscribe-text-3 {
+        display: none;
+    }
+    .subscribe-wrapper{
+        column-gap: 4px;
+        padding-left: 20px;
+        padding-right: 20px;
+        input {
+            width: 12em;
+        }
+        button {
+            width: 8em;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+}
+@media (max-width: 720px) {
+    .subscribe {
+        max-width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .subscribe-wrapper{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        column-gap: 8px;
+        .bell-img {
+            grid-column: 1 / 2;
+        }
+        .subscribe-text-wrapper {
+            grid-column: 2 / 3;
+            width: 80%;
+        }
+        form {
+            grid-column: 1 / 3;
+        }
     }
 }

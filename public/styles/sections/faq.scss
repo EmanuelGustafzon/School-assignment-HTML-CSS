@@ -24,7 +24,7 @@
 .contact-card {
     height: 200px;
     width: 200px;
-    border: 1px solid $gray-300;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     display: flex;
     flex-direction: column;

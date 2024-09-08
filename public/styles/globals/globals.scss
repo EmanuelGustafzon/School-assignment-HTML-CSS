@@ -9,11 +9,13 @@
     --bg-primary:#{$white};
     --bg-secondary:#{$gray-100};
     --color: #{$gray-900};
+    --border-color: #{$gray-400};
 }
 body.dark-theme {
     --bg-primary: #{$gray-900};
     --bg-secondary:#{$white-05};
     --color: #{$white};
+    --border-color: #{$white-70};
 }
 body {
     font-family: $font-stack;

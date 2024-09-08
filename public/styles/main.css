@@ -7,12 +7,14 @@
   --bg-primary:#fff;
   --bg-secondary:#F3F6FF;
   --color: #0B0F19;
+  --border-color: #D4D7E5;
 }
 
 body.dark-theme {
   --bg-primary: #0B0F19;
   --bg-secondary:rgba(250, 250, 250, 0.05);
   --color: #fff;
+  --border-color: rgba(250, 250, 250, 0.7);
 }
 
 body {
@@ -590,7 +592,7 @@ body-dark-theme .testamonials-person .title {
 .contact-card {
   height: 200px;
   width: 200px;
-  border: 1px solid #E2E5F1;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -725,29 +727,82 @@ body.dark-theme .active {
 
 .subscribe-wrapper {
   display: grid;
-  grid-template-columns: auto 362px 1fr;
-  column-gap: 10px;
+  grid-template-columns: auto auto 1fr;
+  column-gap: 24px;
   align-items: center;
+}
+.subscribe-wrapper p, .subscribe-wrapper span {
+  font: 700 1.5rem "Manrope", Helvetica, sans-serif;
 }
 .subscribe-wrapper form {
   display: flex;
   align-items: center;
+  border-radius: 8px;
 }
 .subscribe-wrapper input {
-  height: 2em;
-  border-color: #D4D7E5;
+  background-color: var(--bg-secondary);
+  height: 2.9em;
+  width: 15em;
+  padding-left: 1em;
+  border: 1px solid var(--border-color);
   color: #B4B7C9;
   font: 500 1rem "Manrope", Helvetica, sans-serif;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 .subscribe-wrapper button {
-  height: 2.5em;
-  width: 5em;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  height: 3.5em;
+  width: 10em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-width: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
+@media (max-width: 1340px) {
+  .subscribe {
+    max-width: 720px;
+  }
+  #subscribe-text-2, #subscribe-text-3 {
+    display: none;
+  }
+  .subscribe-wrapper {
+    column-gap: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .subscribe-wrapper input {
+    width: 12em;
+  }
+  .subscribe-wrapper button {
+    width: 8em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media (max-width: 720px) {
+  .subscribe {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .subscribe-wrapper {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 8px;
+  }
+  .subscribe-wrapper .bell-img {
+    grid-column: 1/2;
+  }
+  .subscribe-wrapper .subscribe-text-wrapper {
+    grid-column: 2/3;
+    width: 80%;
+  }
+  .subscribe-wrapper form {
+    grid-column: 1/3;
+  }
+}
 footer {
   bottom: 0;
   margin-bottom: 50px;
