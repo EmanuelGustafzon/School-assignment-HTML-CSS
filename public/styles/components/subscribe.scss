@@ -1,5 +1,6 @@
 .subscribe {
     background-color: var(--bg-secondary);
+    border-radius: 8px;
     max-width: 1340px;
     height: 200px;
     margin: auto auto;
@@ -17,7 +18,8 @@
     form {
         display: flex;
         align-items: center; 
-        border-radius: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
     }
     input {
         background-color: var(--bg-secondary);

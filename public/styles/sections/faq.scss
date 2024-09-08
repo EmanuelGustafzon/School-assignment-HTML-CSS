@@ -123,6 +123,9 @@
         'contact contact';
         row-gap: 24px;
     }
+    .question {
+        width: 80%;
+    }
     .faq-heading, .faq-description {
         justify-self: center;
     }
@@ -133,6 +136,11 @@
 }
 
 @media (max-width: 720px) {
+    .accordion {
+        column-gap: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     .contact-btn-mobile {
         display: grid;
     }
