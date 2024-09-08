@@ -1,0 +1,16 @@
+footer {
+    bottom: 0;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+}
+@media (max-width: 720px) {
+    footer {
+        display: grid;
+        p {
+            justify-self: center;
+        }
+    }
+}

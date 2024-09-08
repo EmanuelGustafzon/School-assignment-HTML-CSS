@@ -1,0 +1,33 @@
+.subscribe {
+    background-color: var(--bg-secondary);
+    max-width: 1340px;
+    height: 200px;
+    margin: auto auto;
+    display: flex;
+    justify-content: center; 
+    
+}
+.subscribe-wrapper {
+    display: grid;
+    grid-template-columns: auto 362px 1fr;
+    column-gap: 10px;
+    align-items: center;
+    form {
+      display: flex;
+      align-items: center;  
+    }
+    input {
+        height: 2em;
+        border-color: $gray-400;
+        color: $gray-500;
+        font: $m-text;
+        border-top-left-radius: 8px; 
+        border-bottom-left-radius: 8px;
+    }
+    button {
+        height: 2.5em;
+        width: 5em;
+        border-top-left-radius: 0px; 
+        border-bottom-left-radius: 0px; 
+    }
+}

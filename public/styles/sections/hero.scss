@@ -61,18 +61,10 @@
     align-items: center;
     color: $gray-600;
     font: $m-text;
-
     span {
         margin-left: 5px;
     }
 }
-.down-arrow-image {
-    @include build-image(".././images/next-btn.svg", 2.5rem, 2.5rem);
-    body.dark-theme & {
-        @include build-image(".././images/dark-theme/next-btn-dark-mode.svg", 2.5rem, 2.5rem);
-    }
-}
-
 @media (max-width: 1340px) {
     .banner-wrapper {
         width: 720px;

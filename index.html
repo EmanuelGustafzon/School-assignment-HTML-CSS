@@ -70,7 +70,9 @@
                         </a>
                     </div>
                     <div class="banner-scroll-to-discover">
-                        <div class="down-arrow-image"></div>
+                        <button class="arrow-btn">
+                            <i class="fas fa-chevron-down arrow"></i>
+                        </button>
                         <span>Discover more</span>
                     </div>
             </div>
@@ -328,9 +330,21 @@
         </div>
     </section>
 
-    <div style="height: 1000px;"></div>
-    <footer class="footer"></footer>
+    <div class="subscribe">
+        <div class="subscribe-wrapper">
+            <img src="public/images/notification.svg" alt="notification icon / bell">
+            <h3 class="subscribe-text">Subscribe to our newsletter to stay informed about latest updates</h3>
+            <form action="none">   
+                <input type="text" placeholder="Your Email"/>
+                <button class="btn btn-brand"></button>
+            </form>
+        </div>
+    </div>
 
+    <footer>
+        <p>© 2024 Silicon. All rights reserved.</p>
+        <p>Credit MadrasThemes</p>
+    </footer>
 </body>
 <script>
     const toggleTheme= () => {
