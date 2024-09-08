@@ -350,21 +350,6 @@
         <p>Credit MadrasThemes</p>
     </footer>
 </body>
-<script>
-    const toggleTheme= () => {
-        const bodyElement = document.getElementsByTagName('body')[0];
-        bodyElement.className === 'light-theme' ? 
-            bodyElement.className = 'dark-theme' 
-            : bodyElement.className = 'light-theme'; 
-        };
-
-    const arrowBtns = document.getElementsByClassName('arrow-btn');
-    const answers = document.getElementsByClassName('answer');
-    for(let i = 0; i < arrowBtns.length; i++) {
-        arrowBtns[i].addEventListener('click', () => {
-            arrowBtns[i].classList.toggle('active');
-            answers[i].classList.toggle('hidden');
-        });
-    };
+<script src="public/scripts/index.js">
 </script>
 </html>
