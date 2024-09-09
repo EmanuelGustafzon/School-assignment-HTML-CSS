@@ -21,21 +21,20 @@
     }
     input {
         background-color: $white;
+        font: $m-text;
         height: 2.9em;
         width: 15em;
         padding-left: 1em;
         border: 1px solid var(--border-color);
         color: $gray-500;
-        font: $m-text;
         border-top-left-radius: 8px; 
         border-bottom-left-radius: 8px;
         &:focus {
-            outline: none;
-            box-sizing: 0 0 10px black;
+            outline-color: $brand-primary;
         }
     }
     button {
-        height: 3.5em;
+        height: 3.45em;
         width: 10em;
         padding-left: 2em;
         padding-right: 2em;

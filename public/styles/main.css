@@ -750,21 +750,20 @@ body.dark-theme .active {
 }
 .subscribe-wrapper input {
   background-color: #fff;
+  font: 500 1rem "Manrope", Helvetica, sans-serif;
   height: 2.9em;
   width: 15em;
   padding-left: 1em;
   border: 1px solid var(--border-color);
   color: #B4B7C9;
-  font: 500 1rem "Manrope", Helvetica, sans-serif;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 .subscribe-wrapper input:focus {
-  outline: none;
-  box-sizing: 0 0 10px black;
+  outline-color: #6366F1;
 }
 .subscribe-wrapper button {
-  height: 3.5em;
+  height: 3.45em;
   width: 10em;
   padding-left: 2em;
   padding-right: 2em;
