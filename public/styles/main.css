@@ -633,6 +633,7 @@ body-dark-theme .testamonials-person .title {
   box-shadow: 0 1px 5px rgba(61, 56, 56, 0.2);
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 12px;
 }
 body.dark-theme .accordion {
   background-color: rgba(250, 250, 250, 0.05);
@@ -818,11 +819,14 @@ body.dark-theme .active {
 }
 footer {
   bottom: 0;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 32px;
+  margin-top: 32px;
   display: flex;
   justify-content: center;
   column-gap: 5px;
+}
+footer p {
+  color: #9397AD;
 }
 
 @media (max-width: 720px) {

@@ -1,7 +1,0 @@
-@mixin build-image($src, $width, $height ) {
-    background-image: url(#{$src});
-    background-size: cover;
-    background-position: center;
-    width: $width;
-    height: $height;
-}

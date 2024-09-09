@@ -1,10 +1,13 @@
 footer {
     bottom: 0;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 32px;
+    margin-top: 32px;
     display: flex;
     justify-content: center;
     column-gap: 5px;
+    p {
+        color: $gray-600;
+    }
 }
 @media (max-width: 720px) {
     footer {
