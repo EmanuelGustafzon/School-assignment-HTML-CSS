@@ -102,6 +102,8 @@
     .banner-heading {
         text-align: center;
         font: $display-6;
+        padding-left: 0;
+        padding-right: 0;
         margin-bottom: 1em;
     }
     .banner-text {
@@ -109,9 +111,10 @@
         margin-bottom: 2.5em;
     }
     .banner-market{
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 3em;
+        display: grid;
+        padding-left: 1em;
+        padding-right: 1em;
+        row-gap: 0.75em;
     }
     .banner-scroll-to-discover {
         justify-content: center;
