@@ -61,6 +61,7 @@
 
 @media (max-width: 720px) {
     .nav-wrapper {
+        box-sizing: border-box;
         max-width: 100%;
         gap: 64px;
         padding-right: 24px;
