@@ -228,7 +228,7 @@ body.dark-theme .btn-primary {
 }
 
 .banner-wrapper {
-  padding-top: 180px;
+  padding-top: 130px;
   overflow: hidden;
   height: 600px;
   max-width: 1340px;
@@ -269,7 +269,7 @@ body.dark-theme .btn-primary {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 8px;
+  column-gap: 12px;
 }
 
 .fa-apple {
@@ -305,7 +305,13 @@ body.dark-theme .btn-primary {
   .banner-heading {
     font: 800 3rem "Manrope", Helvetica, sans-serif;
     justify-self: center;
+    padding-left: 15%;
+    padding-right: 15%;
     grid-area: heading;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .banner-phone-image {
     width: 380px;
