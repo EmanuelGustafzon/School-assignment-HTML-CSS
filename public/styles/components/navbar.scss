@@ -29,6 +29,9 @@
     display: flex;
     column-gap: 12px;
 }
+.theme-text {
+    color: $gray-700;
+}
 .signin {
     margin-left: 32px;
 }

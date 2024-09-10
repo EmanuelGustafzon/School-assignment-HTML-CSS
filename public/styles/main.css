@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -109,8 +110,8 @@ body.dark-theme .icon-background {
 }
 
 .btn-small {
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+  padding-left: 0.54em;
+  padding-right: 0.54em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
@@ -177,6 +178,10 @@ body.dark-theme .btn-primary {
   column-gap: 12px;
 }
 
+.theme-text {
+  color: #565973;
+}
+
 .signin {
   margin-left: 32px;
 }
@@ -230,7 +235,7 @@ body.dark-theme .btn-primary {
 .banner-wrapper {
   padding-top: 130px;
   overflow: hidden;
-  height: 600px;
+  height: 750px;
   max-width: 1340px;
   padding-left: 20px;
   padding-right: 20px;
@@ -239,7 +244,8 @@ body.dark-theme .btn-primary {
   grid-template-columns: 45% 55%;
   grid-template-rows: 30% auto;
   grid-template-areas: "heading img" "content img";
-  column-gap: 80px;
+  column-gap: 5em;
+  row-gap: 2.5em;
 }
 
 .banner-heading {
@@ -298,7 +304,7 @@ body.dark-theme .btn-primary {
 @media (max-width: 1340px) {
   .banner-wrapper {
     width: 720px;
-    height: 520px;
+    height: 680px;
     grid-template-areas: "heading heading" "content img";
     column-gap: 20px;
   }
@@ -316,12 +322,14 @@ body.dark-theme .btn-primary {
   .banner-phone-image {
     width: 380px;
   }
+  .banner-scroll-to-discover {
+    margin-top: 7em;
+  }
 }
 @media (max-width: 720px) {
   .banner-wrapper {
     display: block;
     width: 100%;
-    height: 550px;
     padding-left: 5px;
     padding-right: 5px;
   }
@@ -384,33 +392,37 @@ body.dark-theme .btn-primary {
 }
 .features {
   display: grid;
-  max-width: 1340px;
-  margin: auto auto;
   grid-template-columns: 1fr 1fr;
+  max-width: 1340px;
+  margin: 0 auto;
   padding: 50px 20px;
+  overflow: visible;
+}
+
+.empty-div {
+  display: none;
 }
 
 .features-container h2 {
   font: 700 2.5rem "Manrope", Helvetica, sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 }
 .features-container h3 {
   font: 700 1.5rem "Manrope", Helvetica, sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 }
 .features-container p {
-  margin-bottom: 50px;
+  margin-bottom: 5em;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .features-card {
   display: grid;
-  grid-template-columns: 20% 80%;
-  row-gap: 5px;
+  grid-template-columns: 80px 1fr;
 }
 
 @media (max-width: 1340px) {
@@ -418,11 +430,11 @@ body.dark-theme .btn-primary {
     display: block;
     max-width: 720px;
   }
+  .empty-div {
+    display: grid;
+  }
   .features-heading, .features-description {
     text-align: center;
-  }
-  .features-grid {
-    column-gap: 30px;
   }
   .features-iphone-image {
     display: none;
@@ -430,11 +442,10 @@ body.dark-theme .btn-primary {
 }
 @media (max-width: 720px) {
   .features-grid {
-    display: block;
+    grid-template-columns: 1fr;
   }
 }
 .slider {
-  box-sizing: border-box;
   background-color: var(--bg-secondary);
 }
 
@@ -625,6 +636,7 @@ body-dark-theme .testamonials-person .title {
 
 .faq-description {
   grid-area: description;
+  color: #565973;
 }
 
 .contact {
@@ -634,7 +646,7 @@ body-dark-theme .testamonials-person .title {
 }
 
 .contact-card {
-  height: 200px;
+  height: 170px;
   width: 200px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -713,6 +725,9 @@ body.dark-theme .arrow-btn {
 .answer p {
   font: 500 0.875rem "Manrope", Helvetica, sans-serif;
   color: #565973;
+}
+body.dark-theme .answer p {
+  color: rgba(250, 250, 250, 0.7);
 }
 
 .hidden {

@@ -15,6 +15,7 @@
 }
 .faq-description  {
     grid-area: description;
+    color: $gray-700;
 }
 .contact {
     grid-area: contact;
@@ -22,7 +23,7 @@
     gap: 10px;
 }
 .contact-card {
-    height: 200px;
+    height: 170px;
     width: 200px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -90,6 +91,9 @@
     p {
         font: $s-text;
         color: $gray-700;
+        body.dark-theme & {
+            color: $white-70;
+        }
     }
 }
 .hidden {

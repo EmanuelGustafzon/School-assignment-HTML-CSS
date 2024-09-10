@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d055bf150c.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Silicon Finance App</title>
 </head>
 <body class="light-theme">
     <header>
@@ -93,10 +93,10 @@
             <div class="features-iphone-image">
                 <img src="public/images/features-section-iphone.svg" alt="Iphone with Sillicon app">
             </div>
-
+            
             <div class="features-container">
-                    <h2 class="features-heading">App Features</h2>
-                    <p class="features-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+                <h2 class="features-heading">App Features</h2>
+                <p class="features-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
                 <div class="features-grid">
                     <div class="features-card">
                         <img class="icon-background" src="public/images/credit-card-icon.svg" alt="credit card icon">
@@ -106,35 +106,37 @@
                         </div>
                     </div>
                     <div class="features-card">
-                        <img class="icon-background" src="public/images/data-security-icon.svg" alt="credit card icon">
+                        <img class="icon-background" src="public/images/data-security-icon.svg" alt="data security icon">
                         <div class="features-card-text-container">
                             <h3>Data Security</h3>
                             <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
                         </div>
                     </div>
                     <div class="features-card">
-                        <img class="icon-background" src="public/images/costs-stats-icon.svg" alt="credit card icon">
+                        <img class="icon-background" src="public/images/costs-stats-icon.svg" alt="costs statistics icon">
                         <div class="features-card-text-container">
                             <h3>Cost Statistics</h3>
                             <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
                         </div>
                     </div>
                     <div class="features-card">
-                        <img class="icon-background" class="icon-background" src="public/images/chat-icon.svg" alt="credit card icon">
+                        <img class="icon-background" src="public/images/chat-icon.svg" alt="chat bubble icon">
                         <div class="features-card-text-container">
                             <h3>Support 24/7</h3>
                             <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
                         </div>
                     </div>
                     <div class="features-card">
-                        <img class="icon-background" src="public/images/wallet-icon.svg" alt="credit card icon">
+                        <img class="icon-background" src="public/images/wallet-icon.svg" alt="wallet icon">
                         <div class="features-card-text-container">
                             <h3>Regular Cashback</h3>
                             <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
                         </div>
                     </div>
+                    <!-- Bug with grid on small screen needs an extra div -->
+                    <div class="empty-div"></div> 
                     <div class="features-card">
-                        <img class="icon-background" src="public/images/smily-icon.svg" alt="credit card icon">
+                        <img class="icon-background" src="public/images/smily-icon.svg" alt="Happy smily icon">
                         <div class="features-card-text-container">
                             <h3>Top Standards</h3>
                             <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
@@ -143,6 +145,7 @@
                 </div>
             </div>
         </section>
+
         <section class="slider">
             <div class="slider-wrapper">
                 <h2>How Does It Work</h2>
@@ -336,23 +339,23 @@
                 </div>
             </div>
         </section>
-
-        <div class="subscribe">
-            <div class="subscribe-wrapper">
-                <img class="bell-img" src="public/images/notification.svg" alt="notification icon / bell">
-                <div class="subscribe-text-wrapper">
-                    <span id="subscribe-text-1">Subscribe to our newsletter</span>
-                    <span id="subscribe-text-2">to stay </span>
-                    <p id="subscribe-text-3">informed about latest updates</p>
-                </div>
-                <form>   
-                    <label for="email-input"></label>
-                    <input type="text" name="email" id="email-input" placeholder="&#xf003;  Your Email" style="font-family:Manrope, Helvetica, sans-serif, FontAwesome" />
-                    <button class="btn-brand">Subscripe</button>
-                </form>
-            </div>
-        </div>
     </main>
+    <div class="subscribe">
+        <div class="subscribe-wrapper">
+            <img class="bell-img" src="public/images/notification.svg" alt="notification icon / bell">
+            <div class="subscribe-text-wrapper">
+                <span id="subscribe-text-1">Subscribe to our newsletter</span>
+                <span id="subscribe-text-2">to stay </span>
+                <p id="subscribe-text-3">informed about latest updates</p>
+            </div>
+            <form>   
+                <label for="email-input"></label>
+                <input type="text" name="email" id="email-input" placeholder="&#xf003;  Your Email" style="font-family:Manrope, Helvetica, sans-serif, FontAwesome" />
+                <button class="btn-brand">Subscripe</button>
+            </form>
+        </div>
+    </div>
+    
 
     <footer>
         <p>© 2024 Silicon. All rights reserved.</p>
