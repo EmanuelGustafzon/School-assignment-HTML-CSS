@@ -9,7 +9,7 @@
     overflow: visible;
 }
 .empty-div {
-    display: none;
+    display: none; // bug with grid
 }
 .features-container {
     h2 {
