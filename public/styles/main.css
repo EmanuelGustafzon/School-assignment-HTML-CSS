@@ -327,10 +327,26 @@ body.dark-theme .btn-primary {
   .banner-text {
     text-align: start;
   }
-  .banner-phone-image {
-    display: grid;
+  .phone-img-wrapper {
+    display: block;
+    position: relative;
     grid-area: img;
-    width: 375px;
+  }
+  #phone-bottom {
+    display: grid;
+    position: absolute;
+    z-index: -1;
+    height: 80%;
+    width: 60%;
+    bottom: 0;
+    right: 30%;
+  }
+  #phone-top {
+    display: grid;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 0;
   }
   .banner-market {
     display: flex;
@@ -358,9 +374,6 @@ body.dark-theme .btn-primary {
     padding-right: 0;
     text-align: start;
     display: block;
-  }
-  .banner-phone-image {
-    width: 650px;
   }
   .banner-scroll-to-discover {
     margin-top: 8em;
