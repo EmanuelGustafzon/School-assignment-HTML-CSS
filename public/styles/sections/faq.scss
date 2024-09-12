@@ -1,14 +1,15 @@
 .faq {
-    max-width: 1340px;
     margin: auto auto;
     padding: 50px 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 60px 1fr;
-    grid-template-areas: 
-    'heading accordions'
-    'description accordions'
-    'contact accordions';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: 
+        'heading heading'
+        'description description'
+        'accordions accordions'
+        'contact contact';
+        row-gap: 24px;
 }
 .faq-heading {
     grid-area: heading;
@@ -17,52 +18,108 @@
     grid-area: description;
     color: $gray-700;
 }
+.contact-btn-mobile {
+    display: grid;
+}
 .contact {
     grid-area: contact;
-    display: flex;
-    gap: 10px;
+    justify-self: center;
 }
 .contact-card {
-    height: 170px;
-    width: 200px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    row-gap: 20px;
-    padding-left: 20px;
-}
-#contact-phone {
-    color: $brand-primary;
-    padding-right: 20px;
-    font: $l-text;
-}
-#contact-phone-arrow {
-    color: $brand-primary;
-}
-#contact-sms {
-    color: $success;
-    padding-right: 20px;
-    font: $l-text;
-}
-#contact-sms-arrow {
-    color: $success;
-}
-.accordions {
-    grid-area: accordions;
+    display: none;
 }
 .accordion {
     border-radius: 8px;
     box-shadow: $s-shadow;
-    padding-left: 20px;
-    padding-right: 20px;
+    column-gap: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 12px;
     body.dark-theme & {
         background-color: $white-05;
     }
 }
+.accordions {
+    grid-area: accordions;
+}
+
+// new 
+@media (min-width: 720px) {
+    .faq {
+        max-width: 720px;
+    }
+    .contact-btn-mobile {
+        display: none;
+    }
+    .faq-heading, .faq-description {
+        justify-self: center;
+    }
+    .contact {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+    .contact-card {
+        grid-area: contact;
+        height: 170px;
+        width: 50%;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 20px;
+        padding-left: 20px;
+    }
+    #contact-phone {
+        color: $brand-primary;
+        padding-right: 20px;
+        font: $l-text;
+    }
+    #contact-phone-arrow {
+        color: $brand-primary;
+    }
+    #contact-sms {
+        color: $success;
+        padding-right: 20px;
+        font: $l-text;
+    }
+    #contact-sms-arrow {
+        color: $success;
+    }
+
+}
+@media (min-width: 1340px) {
+    .faq {
+        max-width: 1340px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px 60px 1fr;
+        grid-template-areas: 
+        'heading accordions'
+        'description accordions'
+        'contact accordions';
+    }
+    .faq-heading, .faq-description {
+        justify-self: start;
+    }
+    .contact {
+        justify-self: start;
+    }
+    .accordion {
+        column-gap: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+    .contact-card {
+        width: 200px;
+    }
+}
+
+
+/////////////////////////////////////
+
 .question-wrapper {
     display: flex;
     justify-content: space-between;
@@ -71,6 +128,7 @@
 }
 .question {
     flex: flex-start;
+    width: 80%;
 }
 .arrow-btn {
     display: flex;
@@ -110,49 +168,4 @@
         box-shadow: $brand-shadow; 
     }
     color: $white;
-}
-.contact-btn-mobile {
-    display: none;
-}
-
-
-@media (max-width: 1340px) {
-    .faq {
-        max-width: 720px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-areas: 
-        'heading heading'
-        'description description'
-        'accordions accordions'
-        'contact contact';
-        row-gap: 24px;
-    }
-    .question {
-        width: 80%;
-    }
-    .faq-heading, .faq-description {
-        justify-self: center;
-    }
-    .contact-card {
-        width: 50%;
-    }
-
-}
-
-@media (max-width: 720px) {
-    .accordion {
-        column-gap: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-    .contact-btn-mobile {
-        display: grid;
-    }
-    .contact {
-        justify-self: center;
-    }
-    .contact-card {
-        display: none;
-    }
 }

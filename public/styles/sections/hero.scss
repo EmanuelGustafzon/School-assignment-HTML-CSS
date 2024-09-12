@@ -3,43 +3,34 @@
 .banner {
     background-image: linear-gradient(350deg,rgba(99,102,241,0.15) 0%, rgba(218,70,239,0.07) 42%, rgba(241,244,253,0.07) 83%);
     height: auto;
-    //box-sizing: border-box;
     margin-top: -80px; // cover the navbar
 }
 .banner-wrapper {
+    height: 680px;
     padding-top: 130px;
     overflow: hidden;
-    height: 750px;
-    max-width: 1340px;
-    padding-left: 20px;
-    padding-right: 20px;
+    display: block;
     margin: auto auto;
-    display: grid;
-    grid-template-columns: 45% 55%;
-    grid-template-rows: 30% auto;
-    grid-template-areas: 
-        'heading img'
-        'content img';
-    column-gap: 5em;
-    row-gap: 2.5em;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .banner-heading {
-    font: $display-4;
-    grid-area: heading;
-}
-.banner-content {
-    grid-area: content;
-}
-.banner-phone-image {
-    grid-area: img;
-    width: 650px;
+    text-align: center;
+    font: $display-6;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 1em;
 }
 .banner-text {
-    margin-bottom: 3em;
+    text-align: center;
+    margin-bottom: 2.5em;
 }
-.banner-market {
-    display: flex;
-    column-gap: 5px;
+.banner-market{
+    display: grid;
+    padding-left: 1em;
+    padding-right: 1em;
+    row-gap: 0.75em;
 }
 .market-btn {
     display: flex;
@@ -57,73 +48,151 @@
     font: $heading-6;
 }
 .banner-scroll-to-discover {
-    margin-top: 8em;
+    margin-top: 4em;
     display: flex;
+    justify-content: center;
     align-items: center;
-    color: $gray-600;
-    font: $m-text;
-    span {
-        margin-left: 5px;
-    }
+        color: $gray-600;
+        font: $m-text;
+        span {
+            margin-left: 5px;
+        }
 }
-@media (max-width: 1340px) {
+.banner-phone-image {
+   display: none;
+}
+
+@media (min-width: 720px) {
     .banner-wrapper {
-        width: 720px;
-        height: 680px;
+        max-width: 720px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: grid;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 30% auto;
         grid-template-areas: 
             'heading heading'
             'content img';
-        column-gap: 20px;
+        column-gap:20px;   
+        row-gap: 1.5em;
     }
     .banner-heading {
+        grid-area: heading;
         font: $display-5;
         justify-self: center;
         padding-left: 15%;
         padding-right: 15%;
-        grid-area: heading;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    .banner-content {
+        grid-area: content;
+    }
+    .banner-text {
+        text-align: start;
+    }
     .banner-phone-image {
-        width:380px;
+        display: grid;
+        grid-area: img;
+        width: 375px;
+    }
+    .banner-market {
+        display: flex;
+        padding-left: 0;
+        padding-right: 0;
+        row-gap: 0;
+        column-gap: 5px;
     }
     .banner-scroll-to-discover {
+        justify-content: flex-start;
         margin-top: 7em;
     }
 }
 
-@media (max-width: 720px) {
+@media (min-width: 1340px) {
     .banner-wrapper {
-        display: block;
-        width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-        //box-sizing: border-box;
+        max-width: 1340px;
+        grid-template-areas: 
+            'heading img'
+            'content img';
+        column-gap: 5em;
     }
     .banner-heading {
-        text-align: center;
-        font: $display-6;
+        font: $display-4;
+        grid-area: heading;
+        justify-self: start;
         padding-left: 0;
         padding-right: 0;
-        margin-bottom: 1em;
-    }
-    .banner-text {
-        text-align: center;
-        margin-bottom: 2.5em;
-    }
-    .banner-market{
-        display: grid;
-        padding-left: 1em;
-        padding-right: 1em;
-        row-gap: 0.75em;
-    }
-    .banner-scroll-to-discover {
-        margin-top: 4em;
-        justify-content: center;
+        text-align: start;
+        display: block;
     }
     .banner-phone-image {
-       display: none;
+        width: 650px;
     }
+    .banner-scroll-to-discover {
+        margin-top: 8em;
+    } 
 }
+
+// @media (max-width: 1340px) {
+//     .banner-wrapper {
+//         width: 720px;
+//         height: 680px;
+//         grid-template-areas: 
+//             'heading heading'
+//             'content img';
+//         column-gap: 20px;
+//     }
+//     .banner-heading {
+//         font: $display-5;
+//         justify-self: center;
+//         padding-left: 15%;
+//         padding-right: 15%;
+//         grid-area: heading;
+//         text-align: center;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+//     .banner-phone-image {
+//         width:380px;
+//     }
+//     .banner-scroll-to-discover {
+//         margin-top: 7em;
+//     }
+// }
+
+// @media (max-width: 720px) {
+//     .banner-wrapper {
+//         display: block;
+//         width: 100%;
+//         padding-left: 5px;
+//         padding-right: 5px;
+//     }
+//     .banner-heading {
+//         text-align: center;
+//         font: $display-6;
+//         padding-left: 0;
+//         padding-right: 0;
+//         margin-bottom: 1em;
+//     }
+//     .banner-text {
+//         text-align: center;
+//         margin-bottom: 2.5em;
+//     }
+//     .banner-market{
+//         display: grid;
+//         padding-left: 1em;
+//         padding-right: 1em;
+//         row-gap: 0.75em;
+//     }
+//     .banner-scroll-to-discover {
+//         margin-top: 4em;
+//         justify-content: center;
+//     }
+//     .banner-phone-image {
+//        display: none;
+//     }
+// }
