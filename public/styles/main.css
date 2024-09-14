@@ -843,19 +843,11 @@ body.dark-theme .active {
 .subscribe-wrapper {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  column-gap: 8px;
   align-items: center;
+  place-items: center;
 }
-.subscribe-wrapper p, .subscribe-wrapper span {
+.subscribe-wrapper span {
   font: 700 1.5rem "Manrope", Helvetica, sans-serif;
-}
-.subscribe-wrapper .bell-img {
-  grid-column: 1/2;
-}
-.subscribe-wrapper .subscribe-text-wrapper {
-  grid-column: 2/3;
-  width: 80%;
 }
 .subscribe-wrapper form {
   height: 52px;
