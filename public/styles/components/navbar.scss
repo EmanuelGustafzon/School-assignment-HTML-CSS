@@ -1,14 +1,15 @@
 @import './toggle.scss';
 @import './buttons.scss';
-
 .nav-wrapper {
-    max-width: 1340px;
     height: 80px;
     display: grid;
-    grid-template-columns: auto 1fr auto auto;
-    gap: 32px;
     margin: auto auto;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
+    max-width: 100%;
+    gap: 64px;
+    padding-right: 24px;
+    padding-left: 12px;
 }
 .logo-link {
     display: flex;
@@ -18,61 +19,62 @@
 .logo-name {
     font: $xl-text;
 }
-.links { 
-    font: $navigation;
+.links, .signin, .theme-text {
+    display: none;
 }
 .nav-link:hover {
     color: $brand-primary;
 }
-
 .theme-settings-wrapper {
     display: flex;
     column-gap: 12px;
 }
+.theme-settings-wrapper {
+    margin-bottom: 24px;
+}
 .theme-text {
     color: $gray-700;
 }
-.signin {
-    margin-left: 32px;
-}
-.fa-user {
-    padding-right: 8px;
-}
-
 .burger-menu {
-    display: none;
+    display: block;
+    font-size: 1.5em;
+    color: var(--color);
+    border-width: 0;
+    background-color: transparent;
 }
-
-@media (max-width: 1340px) {
+@media (min-width: 720px) {
     .nav-wrapper {
         max-width: 720px;
-        grid-template-columns: 1fr auto auto;
         gap: 76px;
     }
-    .links, .signin {
-        display: none;
+    .theme-settings-wrapper {
+        margin-bottom: 0;
+    }
+    .theme-text {
+        display: block;
+    }
+}
+@media (min-width: 1340px) {
+    .nav-wrapper {
+        max-width: 1340px;
+        grid-template-columns: auto 1fr auto auto;
+        gap: 32px;
+    }
+    .links, .signin, .theme-text {
+        display: block;
+    }
+    .links { 
+        font: $navigation;
+    }
+    .signin {
+        margin-left: 32px;
+    }
+    .fa-user {
+        padding-right: 8px;
     }
     .burger-menu {
-        display: block;
-        font-size: 1.5em;
-        color: var(--color);
-        border-width: 0;
-        background-color: transparent;
+        display: none;
     }
 }
 
-@media (max-width: 720px) {
-    .nav-wrapper {
-        box-sizing: border-box;
-        max-width: 100%;
-        gap: 64px;
-        padding-right: 24px;
-        padding-left: 12px;
-    }
-    .theme-settings-wrapper {
-        margin-bottom: 24px;
-    }
-    .theme-text {
-        display: none;
-    }
-}
+

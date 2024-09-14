@@ -148,13 +148,15 @@ body.dark-theme .btn-primary {
 }
 
 .nav-wrapper {
-  max-width: 1340px;
   height: 80px;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  gap: 32px;
   margin: auto auto;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
+  max-width: 100%;
+  gap: 64px;
+  padding-right: 24px;
+  padding-left: 12px;
 }
 
 .logo-link {
@@ -167,8 +169,8 @@ body.dark-theme .btn-primary {
   font: 700 1.25rem "Manrope", Helvetica, sans-serif;
 }
 
-.links {
-  font: 700 1rem "Manrope", Helvetica, sans-serif;
+.links, .signin, .theme-text {
+  display: none;
 }
 
 .nav-link:hover {
@@ -180,51 +182,53 @@ body.dark-theme .btn-primary {
   column-gap: 12px;
 }
 
+.theme-settings-wrapper {
+  margin-bottom: 24px;
+}
+
 .theme-text {
   color: #565973;
 }
 
-.signin {
-  margin-left: 32px;
-}
-
-.fa-user {
-  padding-right: 8px;
-}
-
 .burger-menu {
-  display: none;
+  display: block;
+  font-size: 1.5em;
+  color: var(--color);
+  border-width: 0;
+  background-color: transparent;
 }
 
-@media (max-width: 1340px) {
+@media (min-width: 720px) {
   .nav-wrapper {
     max-width: 720px;
-    grid-template-columns: 1fr auto auto;
     gap: 76px;
   }
-  .links, .signin {
-    display: none;
-  }
-  .burger-menu {
-    display: block;
-    font-size: 1.5em;
-    color: var(--color);
-    border-width: 0;
-    background-color: transparent;
-  }
-}
-@media (max-width: 720px) {
-  .nav-wrapper {
-    box-sizing: border-box;
-    max-width: 100%;
-    gap: 64px;
-    padding-right: 24px;
-    padding-left: 12px;
-  }
   .theme-settings-wrapper {
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
   .theme-text {
+    display: block;
+  }
+}
+@media (min-width: 1340px) {
+  .nav-wrapper {
+    max-width: 1340px;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 32px;
+  }
+  .links, .signin, .theme-text {
+    display: block;
+  }
+  .links {
+    font: 700 1rem "Manrope", Helvetica, sans-serif;
+  }
+  .signin {
+    margin-left: 32px;
+  }
+  .fa-user {
+    padding-right: 8px;
+  }
+  .burger-menu {
     display: none;
   }
 }
