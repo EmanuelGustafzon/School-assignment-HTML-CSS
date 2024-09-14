@@ -16,13 +16,14 @@
         font: $heading-4;
     }
     form {
+        height: 52px;
         display: flex;
         align-items: center; 
     }
     input {
         background-color: $white;
         font: $m-text;
-        height: 2.9em;
+        height: 100%;
         width: 15em;
         padding-left: 1em;
         border: 1px solid var(--border-color);
@@ -34,7 +35,7 @@
         }
     }
     button {
-        height: 3.45em;
+        height: 100%;
         width: 10em;
         padding-left: 2em;
         padding-right: 2em;

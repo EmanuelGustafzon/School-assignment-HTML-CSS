@@ -1,75 +1,75 @@
 .testamonials {
-    background-color: var(--bg-secondary);
-    padding: 50px 20px;
+    display: none;
 }
-.testamonials-wrapper {
-    max-width: 1340px;
-    margin: auto auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 14px;
-}
-.testamonials-heading {
-    align-self: start; 
-    justify-self: center;
-}
-.testamonials-card {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 350px;
-    width: 416px;
-    align-self: center;
-    background-color: $white;
-    body.dark-theme & {
-        background-color: $white-05;
-    }
-    border-radius: 8px;
-
-}
-.citat-img {
-    display: grid;
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    margin-left: 34px;
-    transform: translateY(-24px);
-    border-radius: 6px;
-    background-color: $brand-primary;
-    place-content: center;
-}
-.stars {
-    grid-column: 2 / 6;
-    grid-row: 3 / 4;
-}
-.testamonials-content {
-    grid-column: 2 / 12;
-    grid-row: 5 / 9;
-}
-.testamonials-person {
-    display: flex;
-    grid-column: 2 / 12;
-    grid-row: 10 / 12;
-    img {
-        margin-right: 10px;
-    }
-    .name {
-        font: $l-text;
-        color: $gray-900;
-        body.dark-theme & {
-            color: $white;
-        }
-    }
-    .title {
-        color: $gray-600;
-        body-dark-theme & {
-            color: $white-70;
-        }
-    }
-}
-
-@media (max-width: 1340px) {
+@media (min-width: 1340px) {
     .testamonials {
-        display: none;
+        display: block;
+        background-color: var(--bg-secondary);
+        padding: 50px 20px;
+    }
+    .testamonials-wrapper {
+        max-width: 1340px;
+        margin: auto auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+    }
+    .testamonials-heading {
+        align-self: start; 
+        justify-self: center;
+    }
+    .testamonials-card {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        height: 350px;
+        width: 416px;
+        align-self: center;
+        background-color: $white;
+        body.dark-theme & {
+            background-color: $white-05;
+        }
+        border-radius: 8px;
+    
+    }
+    .citat-img {
+        display: grid;
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        margin-left: 34px;
+        transform: translateY(-24px);
+        border-radius: 6px;
+        background-color: $brand-primary;
+        place-content: center;
+    }
+    .stars {
+        grid-column: 2 / 6;
+        grid-row: 3 / 4;
+    }
+    .testamonials-content {
+        grid-column: 2 / 12;
+        grid-row: 5 / 9;
+    }
+    .testamonials-person {
+        display: flex;
+        grid-column: 2 / 12;
+        grid-row: 10 / 12;
+        img {
+            margin-right: 10px;
+        }
+        .name {
+            font: $l-text;
+            color: $gray-900;
+            body.dark-theme & {
+                color: $white;
+            }
+        }
+        .title {
+            color: $gray-600;
+            body-dark-theme & {
+                color: $white-70;
+            }
+        }
     }
 }

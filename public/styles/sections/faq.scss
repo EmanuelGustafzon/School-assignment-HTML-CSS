@@ -41,9 +41,56 @@
 }
 .accordions {
     grid-area: accordions;
+} 
+.question-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
 }
+.question {
+    flex: flex-start;
+    width: 80%;
+}
+.arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    color: $gray-800;
+    body.dark-theme & {
+        color: $white;
+    }
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border-width: 0;
+}
+.answer {
+    padding: 24px 24px;
+    p {
+        font: $s-text;
+        color: $gray-700;
+        body.dark-theme & {
+            color: $white-70;
+        }
+    }
+}
+.hidden {
+    display: none;
 
-// new 
+}
+.active {
+    .arrow {
+        transform: rotateX(180deg);
+    }
+    background-color: $brand-primary;
+    body.dark-theme & {
+        background-color: $brand-primary;
+        box-shadow: $brand-shadow; 
+    }
+    color: $white;
+}
 @media (min-width: 720px) {
     .faq {
         max-width: 720px;
@@ -107,7 +154,6 @@
         justify-self: start;
     }
     .accordion {
-        column-gap: 0;
         padding-left: 20px;
         padding-right: 20px;
         
@@ -115,57 +161,4 @@
     .contact-card {
         width: 200px;
     }
-}
-
-
-/////////////////////////////////////
-
-.question-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 62px;
-}
-.question {
-    flex: flex-start;
-    width: 80%;
-}
-.arrow-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-secondary);
-    color: $gray-800;
-    body.dark-theme & {
-        color: $white;
-    }
-    height: 36px;
-    width: 36px;
-    border-radius: 50%;
-    border-width: 0;
-}
-.answer {
-    padding: 24px 24px;
-    p {
-        font: $s-text;
-        color: $gray-700;
-        body.dark-theme & {
-            color: $white-70;
-        }
-    }
-}
-.hidden {
-    display: none;
-
-}
-.active {
-    .arrow {
-        transform: rotateX(180deg);
-    }
-    background-color: $brand-primary;
-    body.dark-theme & {
-        background-color: $brand-primary;
-        box-shadow: $brand-shadow; 
-    }
-    color: $white;
 }
