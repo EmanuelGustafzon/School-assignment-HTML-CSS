@@ -1,24 +1,37 @@
 .subscribe {
+    max-width: 100%; 
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: var(--bg-secondary);
     border-radius: 8px;
-    max-width: 1340px;
     height: 200px;
-    margin: auto auto;
     display: flex;
     justify-content: center; 
 }
+#subscribe-text-2 {
+    display: none;
+}
 .subscribe-wrapper {
     display: grid;
-    grid-template-columns: auto auto 1fr;
-    column-gap: 24px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 8px;
     align-items: center;
     p, span {
         font: $heading-4;
     }
+    .bell-img {
+        grid-column: 1 / 2;
+    }
+    .subscribe-text-wrapper {
+        grid-column: 2 / 3;
+        width: 80%;
+    }
     form {
         height: 52px;
         display: flex;
-        align-items: center; 
+        align-items: center;
+        grid-column: 1 / 3;
     }
     input {
         background-color: $white;
@@ -44,18 +57,20 @@
         border-bottom-right-radius: 8px;
     }
 }
-
-@media (max-width: 1340px) {
+@media (min-width: 720px) {
     .subscribe {
         max-width: 720px;
-    }
-    #subscribe-text-2, #subscribe-text-3 {
-        display: none;
+        margin: auto auto;
     }
     .subscribe-wrapper{
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: auto;
         column-gap: 4px;
         padding-left: 20px;
         padding-right: 20px;
+        form {
+            grid-column: auto;
+        }
         input {
             width: 12em;
         }
@@ -66,25 +81,26 @@
         }
     }
 }
-@media (max-width: 720px) {
+@media (min-width: 1340px) {
     .subscribe {
-        max-width: 100%;
-        margin-left: 10px;
-        margin-right: 10px;
+        max-width: 1340px;
     }
-    .subscribe-wrapper{
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        column-gap: 8px;
+    .subscribe-wrapper {
         .bell-img {
-            grid-column: 1 / 2;
+            grid-column: auto;
         }
         .subscribe-text-wrapper {
-            grid-column: 2 / 3;
+            grid-column: auto;
             width: 80%;
         }
-        form {
-            grid-column: 1 / 3;
+        input {
+            width: 18em;
         }
+        button {
+            width: 10em;
+        }
+    }
+    #subscribe-text-2 {
+        display: inline-block;
     }
 }
