@@ -67,9 +67,6 @@
         }
         .title {
             color: $gray-600;
-            body-dark-theme & {
-                color: $white-70;
-            }
         }
     }
 }

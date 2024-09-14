@@ -49,6 +49,7 @@
     height: 62px;
 }
 .question {
+    font: $navigation;
     flex: flex-start;
     width: 80%;
 }
@@ -71,9 +72,6 @@
     p {
         font: $s-text;
         color: $gray-700;
-        body.dark-theme & {
-            color: $white-70;
-        }
     }
 }
 .hidden {
@@ -118,6 +116,9 @@
         align-items: flex-start;
         row-gap: 20px;
         padding-left: 20px;
+        body.dark-theme & {
+            color: $white-70;
+        }
     }
     #contact-phone {
         color: $brand-primary;

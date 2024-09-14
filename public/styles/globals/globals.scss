@@ -13,8 +13,11 @@
 body.dark-theme {
     --bg-primary: #{$gray-900};
     --bg-secondary:#{$white-05};
-    --color: #{$white};
+    --color: #{$white-70};
     --border-color: #{$white-70};
+    h1, h2, h3 {
+        color: $white;
+    }
 }
 body {
     font-family: $font-stack;
