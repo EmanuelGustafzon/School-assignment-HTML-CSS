@@ -67,8 +67,8 @@ p {
   width: 0;
 }
 
-/* Create a custom radio button */
-.checkmark {
+/* Create a slider */
+.toggle-slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -76,28 +76,31 @@ p {
   width: 46px;
   background-color: #9397AD;
   border-radius: 20px;
+  transition: background-color 0.5s ease;
 }
 
-/* When the radio button is checked, add a blue background */
-.toggle-container input:checked ~ .checkmark {
+/* When the toggle is checked, add brand primary background color */
+.toggle-container input:checked ~ .toggle-slider {
   background-color: #6366F1;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
+/* Create the indicator (the dot/circle - to the left when not checked) */
+.toggle-slider:after {
   content: "";
   position: absolute;
   display: block;
+  transition: left 0.5s ease;
+  left: 0;
 }
 
-/* Show the indicator (dot/circle) when checked */
-.toggle-container input:checked ~ .checkmark:after {
+/* slide (dot/circle) when checked */
+.toggle-container input:checked ~ .toggle-slider:after {
   display: block;
   left: 22px;
 }
 
 /* Style the indicator (dot/circle) */
-.toggle-container .checkmark:after {
+.toggle-container .toggle-slider:after {
   width: 20px;
   height: 20px;
   margin-top: 2px;
