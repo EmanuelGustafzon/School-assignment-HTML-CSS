@@ -1,19 +1,17 @@
 footer {
+    display: grid;
     bottom: 0;
     margin-bottom: 32px;
     margin-top: 32px;
-    display: flex;
     justify-content: center;
     column-gap: 5px;
     p {
         color: $gray-600;
+        justify-self: center;
     }
 }
-@media (max-width: 720px) {
+@media (min-width: 720px) {
     footer {
-        display: grid;
-        p {
-            justify-self: center;
-        }
+        display: flex;
     }
 }
