@@ -742,6 +742,7 @@ body.dark-theme .arrow-btn {
 }
 
 .active {
+  transition: background-color 0.5s ease;
   background-color: #6366F1;
   color: #fff;
 }
