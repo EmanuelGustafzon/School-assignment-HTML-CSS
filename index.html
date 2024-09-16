@@ -16,11 +16,10 @@
 <body class="light-theme">
     <header>
         <div class="nav-wrapper">
-            <a href="/" class="logo-link">
-                <img src="public/images/logo.svg" alt="logo-img">
+            <a href="index.html" class="logo-link">
+                <img src="public/images/logo.svg" alt="Silicon Logo">
                 <h1 class="logo-name">Sillicon</h1>
             </a>
-
             <nav class="links">
                 <a href="/" class="nav-link">Features</a>
             </nav>
@@ -35,7 +34,7 @@
                 </label>
             </div>
 
-            <a class="btn btn-brand btn-medium signin">
+            <a href="/" class="btn btn-brand btn-medium signin">
                 <i class="far fa-user"></i>
                 Sign in / up
             </a>
@@ -343,25 +342,23 @@
                 </div>
             </div>
         </section>
-    </main>
-    <div class="subscribe">
-        <div class="subscribe-wrapper">
-            <div class="bell-text-wrapper">
-                <img class="bell-img" src="public/images/notification.svg" alt="notification icon / bell">
-                <div class="subscribe-text-wrapper">
-                    <h2 id="subscribe-text-1">Subscribe to our newsletter</h2>
-                    <span id="subscribe-text-2">to stay informed about latest updates</span>
+        <section class="subscribe">
+            <div class="subscribe-wrapper">
+                <div class="bell-text-wrapper">
+                    <img class="bell-img" src="public/images/notification.svg" alt="notification icon / bell">
+                    <div class="subscribe-text-wrapper">
+                        <h2 id="subscribe-text-1">Subscribe to our newsletter</h2>
+                        <span id="subscribe-text-2">to stay informed about latest updates</span>
+                    </div>
                 </div>
+                <form>   
+                    <label for="email-input" aria-label="your email"></label>
+                    <input type="text" name="email" id="email-input" placeholder="&#xf003;  Your Email" style="font-family:Manrope, Helvetica, sans-serif, FontAwesome" />
+                    <button class="btn-brand">Subscribe</button>
+                </form>
             </div>
-            <form>   
-                <label for="email-input" aria-label="your email"></label>
-                <input type="text" name="email" id="email-input" placeholder="&#xf003;  Your Email" style="font-family:Manrope, Helvetica, sans-serif, FontAwesome" />
-                <button class="btn-brand">Subscribe</button>
-            </form>
-        </div>
-    </div>
-    
-
+        </section>
+    </main>
     <footer>
         <p>© 2024 Silicon. All rights reserved.</p>
         <p>Credit MadrasThemes</p>
