@@ -151,6 +151,32 @@ body.dark-theme .btn-primary {
   color: #33354D;
 }
 
+.btn-secondary {
+  background-color: var(--bg-secondary);
+  color: #33354D;
+}
+body.dark-theme .btn-secondary {
+  color: #fff;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #33354D;
+}
+body.dark-theme .btn-white {
+  color: rgba(250, 250, 250, 0.05);
+}
+
+.arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border-width: 0;
+}
+
 .nav-wrapper {
   height: 80px;
   display: grid;
@@ -434,7 +460,7 @@ body.dark-theme .btn-primary {
   margin-bottom: 1em;
 }
 .features-container h3 {
-  font: 700 1.5rem "Manrope", Helvetica, sans-serif;
+  font: 700 1rem "Manrope", Helvetica, sans-serif;
   margin-bottom: 1em;
 }
 .features-container p {
@@ -718,20 +744,8 @@ body.dark-theme .accordion {
   width: 80%;
 }
 
-.arrow-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--bg-secondary);
+.question .arrow-btn {
   transition: background-color 0.5s ease;
-  color: #33354D;
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  border-width: 0;
-}
-body.dark-theme .arrow-btn {
-  color: #fff;
 }
 
 .answer {
@@ -749,7 +763,7 @@ body.dark-theme .arrow-btn {
   transition: opacity 0.3s linear, max-height 0.3s ease 0.3s, padding 0.7s linear;
 }
 
-.arrow {
+.arrow-transition {
   transform: rotateX(0deg);
   transition: transform 0.5s ease;
 }
@@ -758,7 +772,7 @@ body.dark-theme .arrow-btn {
   background-color: #6366F1;
   color: #fff;
 }
-.active .arrow {
+.active .arrow-transition {
   transform: rotateX(180deg);
 }
 body.dark-theme .active {

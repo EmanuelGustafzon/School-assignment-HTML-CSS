@@ -5,11 +5,11 @@ const toggleTheme= () => {
         : bodyElement.className = 'light-theme'; 
     };
 
-const arrowBtns = document.getElementsByClassName('arrow-btn');
+const accordionBtns = document.getElementsByClassName('activate-trigger');
 const answers = document.getElementsByClassName('answer');
-for(let i = 0; i < arrowBtns.length; i++) {
-    arrowBtns[i].addEventListener('click', () => {
-        arrowBtns[i].classList.toggle('active');
-        answers[i - 1].classList.toggle('hidden');
+for(let i = 0; i < accordionBtns.length; i++) {
+    accordionBtns[i].addEventListener('click', () => {
+        accordionBtns[i].classList.toggle('active');
+        answers[i].classList.toggle('hidden');
     });
 };

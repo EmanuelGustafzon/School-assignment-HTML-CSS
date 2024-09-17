@@ -52,20 +52,8 @@
     flex: flex-start;
     width: 80%;
 }
-.arrow-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-secondary);
+.question .arrow-btn {
     transition: background-color 0.5s ease;
-    color: $gray-800;
-    body.dark-theme & {
-        color: $white;
-    }
-    height: 36px;
-    width: 36px;
-    border-radius: 50%;
-    border-width: 0;
 }
 .answer {
     padding: 24px 24px;
@@ -80,12 +68,12 @@
     overflow: hidden;
     transition: opacity 0.3s linear, max-height 0.3s ease 0.3s, padding 0.7s linear;
 }
-.arrow {
+.arrow-transition {
     transform: rotateX(0deg);
     transition: transform 0.5s ease;
 }
 .active {
-    .arrow {
+    .arrow-transition {
         transform: rotateX(180deg);  
     }
     background-color: $brand-primary;
