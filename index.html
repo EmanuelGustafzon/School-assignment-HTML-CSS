@@ -11,9 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d055bf150c.js" crossorigin="anonymous"></script>
-    
 </head>
-<body class="light-theme">
+<body onload="initTheme()" class="light-theme">
     <header>
         <div class="nav-wrapper">
             <a href="index.html" class="logo-link">
@@ -72,7 +71,7 @@
                             </a>
                         </div>
                         <div class="banner-scroll-to-discover">
-                            <button class="arrow-btn btn-white">
+                            <button aria-hidden="true" class="arrow-btn btn-white">
                                 <i class="fas fa-chevron-down arrow"></i>
                             </button>
                             <span>Discover more</span>
@@ -364,6 +363,7 @@
         <p>Credit MadrasThemes</p>
     </footer>
 </body>
-<script src="public/scripts/index.js">
-</script>
+<script src="public/scripts/localStorageDb.js"></script>
+<script src="public/scripts/theme.js"></script>
+<script src="public/scripts/index.js"></script>
 </html>
