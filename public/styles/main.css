@@ -875,13 +875,12 @@ body.dark-theme .active {
   align-items: center;
 }
 .subscribe-wrapper input {
-  background-color: #fff;
+  background-color: var(--bg-secondary);
   font: 500 1rem "Manrope", Helvetica, sans-serif;
   height: 100%;
   width: 60%;
   padding-left: 1em;
   border: 1px solid var(--border-color);
-  color: #B4B7C9;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }

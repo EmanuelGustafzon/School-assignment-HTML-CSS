@@ -21,13 +21,12 @@
         align-items: center;
     }
     input {
-        background-color: $white;
+        background-color: var(--bg-secondary);
         font: $m-text;
         height: 100%;
         width: 60%;
         padding-left: 1em;
         border: 1px solid var(--border-color);
-        color: $gray-500;
         border-top-left-radius: 8px; 
         border-bottom-left-radius: 8px;
         &:focus {
