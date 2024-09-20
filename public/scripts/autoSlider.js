@@ -17,7 +17,7 @@ allSlides[activeSlide].classList.add('active-slide')
 let step = 0;
 
 const nextSlide = () => {
-    if(step === slides.length - 1) step = 0;
+    if(step === slides.length - 1) step = -1;
     step++;
     allSlides[activeSlide].classList.remove('active-slide'); // the middle one is active
     Array.from(allSlides).forEach(slide => slide.style.transform = `translateX(-${100 * step}%)`);  // moves the slide
@@ -27,7 +27,7 @@ const nextSlide = () => {
 }
 
 const prevSlide = () => {
-    if(step === 0) slides.length -1;
+    if(step === 0) step = slides.length;
     step--;
     allSlides[activeSlide].classList.remove('active-slide');
     Array.from(allSlides).forEach(slide => slide.style.transform = `translateX(${-100 * (step % allSlides.length)}%)`);
