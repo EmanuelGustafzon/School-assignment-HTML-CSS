@@ -151,12 +151,20 @@
             <div class="slider-wrapper">
                 <h2>How Does It Work</h2>
                 <div class="slider-images">
-                        <img class="left-image" src="public/images/slider-iphone-1.svg" alt="Sillicon app my budget">
-                        <img class="center-image" src="public/images/slider-iphone-2.svg" alt="Sillicon app my credit cards">
-                        <img class="right-image" src="public/images/slider-iphone-3.svg" alt="Sillicon app my transactions">
+                        <div class="slide">
+                            <img class="left-image" src="public/images/slider-phone-1.svg" alt="Sillicon app my budget">
+                        </div>
+                        <div class="slide">
+                            <img src="public/images/slider-iphone-2.svg" alt="Sillicon app my credit cards">
+                        </div>
+                        <div class="slide">
+                            <img class="right-image" src="public/images/slider-phone-3.svg" alt="Sillicon app my transactions">
+                        </div>
                 </div>
-                <h3>Latest Transaction History</h3>
+                <h3 id="slider-heading">Latest Transaction History</h3>
                 <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
+                <button id="next-btn" class="btn arrow-btn btn-primary"><i class="fas fa-chevron-right arrow"></i></button>
+                <button id="prev-btn" class="btn arrow-btn btn-primary"><i class="fas fa-chevron-left arrow"></i></button>
                 </div>
             </div>
         </section>
@@ -365,5 +373,6 @@
 </body>
 <script src="public/scripts/localStorageDb.js"></script>
 <script src="public/scripts/theme.js"></script>
+<script src="public/scripts/autoSlider.js"></script>
 <script src="public/scripts/index.js"></script>
 </html>
