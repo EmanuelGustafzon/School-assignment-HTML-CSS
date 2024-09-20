@@ -550,7 +550,7 @@ body.dark-theme .btn-white {
 
 #next-btn, #prev-btn {
   position: absolute;
-  top: 45%;
+  bottom: 25em;
 }
 
 #next-btn {
@@ -590,6 +590,9 @@ body.dark-theme .btn-white {
   .center-image {
     margin-left: 80px;
     margin-right: 80px;
+  }
+  #next-btn, #prev-btn {
+    bottom: 32em;
   }
 }
 .feature-tranfers-and-payments {

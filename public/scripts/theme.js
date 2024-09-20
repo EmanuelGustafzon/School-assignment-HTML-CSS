@@ -38,5 +38,11 @@ const initTheme = () => {
         return
     }
     const browserTheme = checkBrowserThemePreference();
-    browserTheme === 'dark' ? changeTheme('dark-theme') : changeTheme('light-theme');
+    if(browserTheme === 'dark') {
+        changeTheme('dark-theme');
+        checkboxState(true);
+    } else {
+        changeTheme('light-theme');
+        checkboxState(false);
+    }
 };
