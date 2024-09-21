@@ -1,5 +1,5 @@
-### Project built with HTML CSS, SCSS and JavaScript.
-## Part of my .NET Web developer studies at EC Utbildningen
+## Project built with HTML CSS, SCSS and JavaScript.
+### Part of my .NET Web developer studies at EC Utbildningen
 ## [View the deployed website](https://emanuelgustafzon.github.io/sillicon/)
 ## what we learned. 
 * Develop responsive websites with HTML, CSS and SCSS.
