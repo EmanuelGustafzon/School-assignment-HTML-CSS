@@ -14,8 +14,8 @@
     h3 {
         font: $heading-4;
         margin-top: 30px;
-        margin-bottom: 20px;
-        min-height: 40px;
+        margin-bottom: 10px;
+        min-height: 65px;
     }
     p {
         padding-bottom: 30px;
@@ -37,7 +37,7 @@
 }
 #next-btn, #prev-btn {
     position: absolute;
-    bottom: 25em;
+    bottom: 50%;
 }
 #next-btn {
     right: 2.5em;

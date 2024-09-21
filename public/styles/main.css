@@ -527,7 +527,8 @@ body.dark-theme .btn-white {
 .slider-wrapper h3 {
   font: 700 1.5rem "Manrope", Helvetica, sans-serif;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  min-height: 65px;
 }
 .slider-wrapper p {
   padding-bottom: 30px;
@@ -550,7 +551,7 @@ body.dark-theme .btn-white {
 
 #next-btn, #prev-btn {
   position: absolute;
-  bottom: 25em;
+  bottom: 50%;
 }
 
 #next-btn {
