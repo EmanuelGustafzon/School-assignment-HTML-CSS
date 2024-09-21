@@ -15,25 +15,31 @@ let allSlides = slider.children;
 let activeSlide = 1
 allSlides[activeSlide].classList.add('active-slide')
 let step = 0;
+// indicates that you need to start going to the right
+prevbtn.style.opacity = 0.5
 
 const nextSlide = () => {
     if(step === slides.length - 1) return;
+    if(step === slides.length - 2) nextbtn.style.opacity = 0.5
     step++;
     allSlides[activeSlide].classList.remove('active-slide'); // the middle one is active
     Array.from(allSlides).forEach(slide => slide.style.transform = `translateX(-${100 * step}%)`);  // moves the slide
     ++activeSlide;
     allSlides[activeSlide].classList.add('active-slide');
     showText()
+    prevbtn.style.opacity = 1
 }
 
 const prevSlide = () => {
     if(step === 0) return;
+    if(step === 1) prevbtn.style.opacity = 0.5
     step--;
     allSlides[activeSlide].classList.remove('active-slide');
     Array.from(allSlides).forEach(slide => slide.style.transform = `translateX(${-100 * (step % allSlides.length)}%)`);
     --activeSlide;
     allSlides[activeSlide].classList.add('active-slide');
     showText()
+    nextbtn.style.opacity = 1
 }
 
 const showText = () => {

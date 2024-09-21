@@ -20,7 +20,7 @@
                 <h1 class="logo-name">Sillicon</h1>
             </a>
             <nav class="links">
-                <a href="/" class="nav-link">Features</a>
+                <a href="#features" class="nav-link">Features</a>
             </nav>
 
             <div class="theme-settings-wrapper">
@@ -71,9 +71,10 @@
                             </a>
                         </div>
                         <div class="banner-scroll-to-discover">
-                            <button aria-hidden="true" class="arrow-btn btn-white">
+                            <a href="#features" class="arrow-btn btn-white">
+                                <p class="screen-readers-only">Go to features section</p>
                                 <i class="fas fa-chevron-down arrow"></i>
-                            </button>
+                            </a>
                             <span>Discover more</span>
                         </div>
                 </div>
@@ -91,7 +92,7 @@
             <div class="company-logo"><img src="public/images/logoipsum-5.svg" alt="Logo of company"></div>
             <div class="company-logo"><img src="public/images/logoipsum-6.svg" alt="Logo of company"></div> 
         </div>
-        <section class="features">
+        <section id="features" class="features">
             <div class="features-iphone-image">
                 <img src="public/images/features-section-iphone.svg" alt="Iphone with Sillicon app">
             </div>
@@ -163,8 +164,12 @@
                 </div>
                 <h3 id="slider-heading">Latest Transaction History</h3>
                 <p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </p>
-                <button id="next-btn" class="btn arrow-btn btn-primary"><i class="fas fa-chevron-right arrow"></i></button>
-                <button id="prev-btn" class="btn arrow-btn btn-primary"><i class="fas fa-chevron-left arrow"></i></button>
+                <button id="next-btn" class="btn arrow-btn btn-primary"><i class="fas fa-chevron-right arrow"></i>
+                    <p class="screen-readers-only">Go to next slide</p>
+                </button>
+                <button id="prev-btn" class="btn arrow-btn btn-primary"><i class="fas fa-chevron-left arrow"></i>
+                    <p class="screen-readers-only">Go to previous slide</p>
+                </button>
                 </div>
             </div>
         </section>
@@ -286,6 +291,7 @@
                     <h3 class="question">Is any of my personal information stored in the App?</h3>
                         <button class="arrow-btn btn-secondary activate-trigger">
                             <i class="fas fa-chevron-down arrow arrow-transition"></i>
+                            <p class="screen-readers-only">Read the answer to the frequent asked question above</p>
                         </button>
                     </div>
                     <div class="answer hidden">
@@ -297,6 +303,7 @@
                     <h3 class="question">What formats can I download my transaction history in?</h3>
                         <button class="arrow-btn btn-secondary activate-trigger">
                             <i class="fas fa-chevron-down arrow arrow-transition"></i>
+                            <p class="screen-readers-only">Read the answer to the frequent asked question above</p>
                         </button>
                     </div>
                     <div class="answer hidden">
@@ -308,6 +315,7 @@
                     <h3 class="question">Can I schedule future transfers?</h3>
                         <button class="arrow-btn btn-secondary activate-trigger">
                             <i class="fas fa-chevron-down arrow arrow-transition"></i>
+                            <p class="screen-readers-only">Read the answer to the frequent asked question above</p>
                         </button>
                     </div>
                     <div class="answer hidden">
@@ -319,6 +327,7 @@
                     <h3 class="question">When can I use Banking App services?</h3>
                         <button class="arrow-btn btn-secondary activate-trigger">
                             <i class="fas fa-chevron-down arrow arrow-transition"></i>
+                            <p class="screen-readers-only">Read the answer to the frequent asked question above</p>
                         </button>
                     </div>
                     <div class="answer hidden">
@@ -330,6 +339,7 @@
                     <h3 class="question">Can I create my own password that is easy for me to remember?</h3>
                         <button class="arrow-btn btn-secondary activate-trigger">
                             <i class="fas fa-chevron-down arrow arrow-transition"></i>
+                            <p class="screen-readers-only">Read the answer to the frequent asked question above</p>
                         </button>
                     </div>
                     <div class="answer hidden">
@@ -341,6 +351,7 @@
                     <h3 class="question">What happens if I forget or lose my password?</h3>
                         <button class="arrow-btn btn-secondary activate-trigger">
                             <i class="fas fa-chevron-down arrow arrow-transition"></i>
+                            <p class="screen-readers-only">Read the answer to the frequent asked question above</p>
                         </button>
                     </div>
                     <div class="answer hidden activate-trigger">
@@ -373,6 +384,6 @@
 </body>
 <script src="public/scripts/localStorageDb.js"></script>
 <script src="public/scripts/theme.js"></script>
-<script src="public/scripts/autoSlider.js"></script>
+<script src="public/scripts/slider.js"></script>
 <script src="public/scripts/accordion.js"></script>
 </html>
