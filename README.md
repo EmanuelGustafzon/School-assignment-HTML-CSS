@@ -1,7 +1,7 @@
 ## Project built with HTML CSS, SCSS and JavaScript.
 ### Part of my .NET Web developer studies at EC Utbildningen
 ## [View the deployed website](https://emanuelgustafzon.github.io/sillicon/)
-## what we learned. 
+## What we learned. 
 * Develop responsive websites with HTML, CSS and SCSS.
 * Work with Figma and use wireframes when coding. 
 * SEO for developers
