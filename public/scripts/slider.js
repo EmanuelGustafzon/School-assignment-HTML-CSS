@@ -59,7 +59,7 @@ const showText = () => {
 nextbtn.addEventListener('click', nextSlide);
 prevbtn.addEventListener('click', prevSlide);
 // On small screens it starts from the first slide otherwise the secound
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('resize', () => {
     window.innerWidth < 720 ? slides[0].style.display = 'none' : slides[0].style.display = 'block' ;
 })
 
