@@ -12,19 +12,19 @@ for(const slide of slides) {
 
 // keep count of the active slide and how many times clicked in one direction as a step
 let allSlides = slider.children;
-let activeSlide = 1
+let activeSlide = 1; 
 allSlides[activeSlide].classList.add('active-slide')
 let step = 0;
+const maxSteps = slides.length - 1
 // indicates that you need to start going to the right
 prevbtn.style.opacity = 0.5
-
 const nextSlide = () => {
-    if(step === slides.length - 1) return;
-    if(step === slides.length - 2) nextbtn.style.opacity = 0.5
+    if(step === maxSteps) return;
+    if(step === maxSteps - 1) nextbtn.style.opacity = 0.5
     step++;
     allSlides[activeSlide].classList.remove('active-slide'); // the middle one is active
     Array.from(allSlides).forEach(slide => slide.style.transform = `translateX(-${100 * step}%)`);  // moves the slide
-    ++activeSlide;
+    activeSlide++
     allSlides[activeSlide].classList.add('active-slide');
     showText()
     prevbtn.style.opacity = 1
@@ -36,7 +36,7 @@ const prevSlide = () => {
     step--;
     allSlides[activeSlide].classList.remove('active-slide');
     Array.from(allSlides).forEach(slide => slide.style.transform = `translateX(${-100 * (step % allSlides.length)}%)`);
-    --activeSlide;
+    activeSlide--
     allSlides[activeSlide].classList.add('active-slide');
     showText()
     nextbtn.style.opacity = 1
@@ -58,6 +58,10 @@ const showText = () => {
 
 nextbtn.addEventListener('click', nextSlide);
 prevbtn.addEventListener('click', prevSlide);
+// On small screens it starts from the first slide otherwise the secound
+document.addEventListener('DOMContentLoaded', () => {
+    window.innerWidth < 720 ? slides[0].style.display = 'none' : slides[0].style.display = 'block' ;
+})
 
 
 

@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d055bf150c.js" crossorigin="anonymous"></script>
 </head>
 <body onload="initTheme()" class="light-theme">
     <header>
@@ -26,6 +25,7 @@
             <div class="theme-settings-wrapper">
                 <span class="theme-text">Dark Mode</span>
                 <label class="toggle-container">
+                    <p class="screen-readers-only">Toggle theme</p>
                     <input 
                         onclick="toggleTheme()"
                         type="checkbox" id="theme-checkbox">
@@ -37,7 +37,7 @@
                 <i class="far fa-user"></i>
                 Sign in / up
             </a>
-            <button class="burger-menu">
+            <button aria-label="Open navigation menu" class="burger-menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -382,6 +382,7 @@
         <p>Credit MadrasThemes</p>
     </footer>
 </body>
+<script src="https://kit.fontawesome.com/d055bf150c.js" crossorigin="anonymous"></script>
 <script src="public/scripts/localStorageDb.js"></script>
 <script src="public/scripts/theme.js"></script>
 <script src="public/scripts/slider.js"></script>
