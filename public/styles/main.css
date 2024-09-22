@@ -914,7 +914,7 @@ body.dark-theme .active {
   align-items: center;
 }
 .subscribe-wrapper input {
-  background-color: var(--bg-secondary);
+  background-color: #fff;
   font: 500 1rem "Manrope", Helvetica, sans-serif;
   height: 100%;
   width: 60%;
