@@ -1,7 +1,7 @@
 .company-logos {
     display: none;
 }
-@media (min-width: 720px) {
+@include tablet {
     .company-logos {
         max-width: 720px;
         padding-top: 36px;
@@ -24,7 +24,7 @@
         display: none;
     }
 }
-@media (min-width: 1340px) {
+@include desktop {
     .company-logos {
         max-width: 1340px;
     }

@@ -56,7 +56,7 @@
     font: $heading-4;
     display: none;
 }
-@media (min-width: 720px) {
+@include tablet{
     .subscribe {
         max-width: 720px;
         margin: auto auto;
@@ -66,7 +66,7 @@
         grid-template-rows: auto;
     }
 }
-@media (min-width: 1340px) {
+@include desktop {
     .subscribe {
         max-width: 1340px;
     }

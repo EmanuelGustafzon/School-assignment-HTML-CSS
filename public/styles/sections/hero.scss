@@ -62,7 +62,7 @@
    display: none;
 }
 
-@media (min-width: 720px) {
+@include tablet {
     .banner-wrapper {
         max-width: 720px;
         padding-left: 20px;
@@ -130,7 +130,7 @@
     }
 }
 
-@media (min-width: 1340px) {
+@include desktop {
     .banner-wrapper {
         max-width: 1340px;
         grid-template-areas: 
