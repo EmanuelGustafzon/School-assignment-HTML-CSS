@@ -19,7 +19,7 @@
     font: $display-6;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 .banner-text {
     text-align: center;
@@ -78,6 +78,7 @@
     }
     .banner-heading {
         grid-area: heading;
+        margin-bottom: 0;
         font: $display-5;
         justify-self: center;
         padding-left: 15%;
@@ -88,6 +89,7 @@
         align-items: center;
     }
     .banner-content {
+        margin-top: 4em;
         grid-area: content;
     }
     .banner-text {
@@ -123,7 +125,8 @@
     }
     .banner-scroll-to-discover {
         justify-content: flex-start;
-        margin-top: 7em;
+        margin-top: 6em;
+        margin-bottom: 4em;
     }
 }
 
@@ -143,6 +146,12 @@
         padding-right: 0;
         text-align: start;
         display: block;
+    }
+    .banner-content {
+        margin-top: 0;
+    }
+    .banner-market {
+        column-gap: 1em;
     }
     .banner-scroll-to-discover {
         margin-top: 8em;

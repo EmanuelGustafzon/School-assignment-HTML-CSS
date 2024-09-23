@@ -291,7 +291,7 @@ body.dark-theme .btn-white {
   font: 800 2.5rem "Manrope", Helvetica, sans-serif;
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .banner-text {
@@ -356,6 +356,7 @@ body.dark-theme .btn-white {
   }
   .banner-heading {
     grid-area: heading;
+    margin-bottom: 0;
     font: 800 3rem "Manrope", Helvetica, sans-serif;
     justify-self: center;
     padding-left: 15%;
@@ -366,6 +367,7 @@ body.dark-theme .btn-white {
     align-items: center;
   }
   .banner-content {
+    margin-top: 4em;
     grid-area: content;
   }
   .banner-text {
@@ -401,7 +403,8 @@ body.dark-theme .btn-white {
   }
   .banner-scroll-to-discover {
     justify-content: flex-start;
-    margin-top: 7em;
+    margin-top: 6em;
+    margin-bottom: 4em;
   }
 }
 @media (min-width: 1340px) {
@@ -418,6 +421,12 @@ body.dark-theme .btn-white {
     padding-right: 0;
     text-align: start;
     display: block;
+  }
+  .banner-content {
+    margin-top: 0;
+  }
+  .banner-market {
+    column-gap: 1em;
   }
   .banner-scroll-to-discover {
     margin-top: 8em;
@@ -789,6 +798,7 @@ body.dark-theme .accordion {
 }
 
 .answer {
+  font: 500 1rem "Manrope", Helvetica, sans-serif;
   padding: 24px 24px;
   max-height: 500px;
   opacity: 1;
