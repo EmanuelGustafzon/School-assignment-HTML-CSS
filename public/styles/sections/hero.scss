@@ -122,6 +122,9 @@
         padding-right: 0;
         row-gap: 0;
         column-gap: 5px;
+        a {
+            min-width: 10em;
+        }
     }
     .banner-scroll-to-discover {
         justify-content: flex-start;

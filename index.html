@@ -18,8 +18,9 @@
                 <img src="public/images/logo.svg" alt="Silicon Logo">
                 <h1 class="logo-name">Sillicon</h1>
             </a>
-            <nav class="links">
+            <nav id="main-menu" class="links" aria-hidden="true">
                 <a href="#features" class="nav-link">Features</a>
+                <a href="#"  id="login-mobile" class="nav-link">Sign in / up</a>
             </nav>
 
             <div class="theme-settings-wrapper">
@@ -37,8 +38,9 @@
                 <i class="far fa-user"></i>
                 Sign in / up
             </a>
-            <button aria-label="Open navigation menu" class="burger-menu">
-                <i class="fas fa-bars"></i>
+            <button aria-expanded="false" aria-controls="main-menu" class="burger-menu">
+                <span class="screen-readers-only">Open menu</span>
+                <i id="burger-icon" class="fas fa-bars"></i>
             </button>
         </div>
     </header>
@@ -385,6 +387,7 @@
 <script src="https://kit.fontawesome.com/d055bf150c.js" crossorigin="anonymous"></script>
 <script src="public/scripts/localStorageDb.js"></script>
 <script src="public/scripts/theme.js"></script>
+<script src="public/scripts/toggleMenu.js"></script>
 <script src="public/scripts/slider.js"></script>
 <script src="public/scripts/accordion.js"></script>
 </html>
