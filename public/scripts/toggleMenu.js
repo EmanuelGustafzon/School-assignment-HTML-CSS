@@ -11,6 +11,7 @@ const setMenuState = () => {
 burger.addEventListener('click', () => {
     setMenuState();
 });
+// close menu when link are clicked
 Array.from(menu.children).forEach(child => {
     child.addEventListener('click', () => setMenuState());
 })
