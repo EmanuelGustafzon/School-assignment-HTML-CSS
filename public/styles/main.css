@@ -792,9 +792,6 @@ body.dark-theme .btn-white {
   body.dark-theme .testamonials-person .name {
     color: #fff;
   }
-  .testamonials-person .title {
-    color: #565973;
-  }
 }
 .faq {
   margin: auto auto;
@@ -925,12 +922,12 @@ body.dark-theme .active {
     color: rgba(250, 250, 250, 0.7);
   }
   #contact-phone {
-    color: #6366F1;
+    color: #4C82F7;
     padding-right: 20px;
     font: 700 1.125rem "Manrope", Helvetica, sans-serif;
   }
   #contact-phone-arrow {
-    color: #6366F1;
+    color: #4C82F7;
   }
   #contact-sms {
     color: #22C55E;
