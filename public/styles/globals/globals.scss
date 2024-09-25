@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 @media (prefers-reduced-motion: no-preference) {
-    :root {
+    html {
       scroll-behavior: smooth;
     }
 }
