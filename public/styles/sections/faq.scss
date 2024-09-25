@@ -12,6 +12,7 @@
         row-gap: 24px;
 }
 .faq-heading {
+    font: $heading-2;
     grid-area: heading;
 }
 .faq-description  {
@@ -142,6 +143,9 @@
         'heading accordions'
         'description accordions'
         'contact accordions';
+    }
+    .faq-heading {
+        font: $heading-5;
     }
     .faq-heading, .faq-description {
         justify-self: start;

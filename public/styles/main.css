@@ -734,6 +734,9 @@ body.dark-theme .btn-white {
     background-color: var(--bg-secondary);
     padding: 50px 20px;
   }
+  .testamonials-heading {
+    font: 700 1.75rem "Manrope", Helvetica, sans-serif;
+  }
   .testamonials-wrapper {
     max-width: 1340px;
     margin: auto auto;
@@ -804,6 +807,7 @@ body.dark-theme .btn-white {
 }
 
 .faq-heading {
+  font: 700 2rem "Manrope", Helvetica, sans-serif;
   grid-area: heading;
 }
 
@@ -944,6 +948,9 @@ body.dark-theme .active {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 60px 60px 1fr;
     grid-template-areas: "heading accordions" "description accordions" "contact accordions";
+  }
+  .faq-heading {
+    font: 700 1.5rem "Manrope", Helvetica, sans-serif;
   }
   .faq-heading, .faq-description {
     justify-self: start;
