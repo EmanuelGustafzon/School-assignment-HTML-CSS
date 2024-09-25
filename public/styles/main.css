@@ -45,7 +45,7 @@ body {
 }
 
 a {
-  font: 500 1rem "Manrope", Helvetica, sans-serif;
+  font: 700 1rem "Manrope", Helvetica, sans-serif;
   color: var(--color);
   text-decoration: none;
 }
@@ -56,74 +56,6 @@ ul {
 
 p {
   font: 500 1rem "Manrope", Helvetica, sans-serif;
-}
-
-.icon-background {
-  width: 61px;
-  height: 61px;
-  background-color: var(--bg-secondary);
-  border-radius: 8px;
-}
-
-.toggle-container {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.toggle-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a slider */
-.toggle-slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 24px;
-  width: 46px;
-  background-color: #9397AD;
-  border-radius: 20px;
-  transition: background-color 0.5s ease;
-}
-
-/* When the toggle is checked, add brand primary background color */
-.toggle-container input:checked ~ .toggle-slider {
-  background-color: #6366F1;
-}
-
-/* Create the indicator (the dot/circle - to the left when not checked) */
-.toggle-slider:after {
-  content: "";
-  position: absolute;
-  display: block;
-  transition: left 0.5s ease;
-  left: 0;
-}
-
-/* slide (dot/circle) when checked */
-.toggle-container input:checked ~ .toggle-slider:after {
-  display: block;
-  left: 22px;
-}
-
-/* Style the indicator (dot/circle) */
-.toggle-container .toggle-slider:after {
-  width: 20px;
-  height: 20px;
-  margin-top: 2px;
-  margin-left: 2px;
-  border-radius: 50%;
-  background: #fff;
 }
 
 .btn {
@@ -192,6 +124,74 @@ body.dark-theme .btn-white {
   width: 36px;
   border-radius: 50%;
   border-width: 0;
+}
+
+.icon-background {
+  width: 61px;
+  height: 61px;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.toggle-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.toggle-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a slider */
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 46px;
+  background-color: #9397AD;
+  border-radius: 20px;
+  transition: background-color 0.5s ease;
+}
+
+/* When the toggle is checked, add brand primary background color */
+.toggle-container input:checked ~ .toggle-slider {
+  background-color: #6366F1;
+}
+
+/* Create the indicator (the dot/circle - to the left when not checked) */
+.toggle-slider:after {
+  content: "";
+  position: absolute;
+  display: block;
+  transition: left 0.5s ease;
+  left: 0;
+}
+
+/* slide (dot/circle) when checked */
+.toggle-container input:checked ~ .toggle-slider:after {
+  display: block;
+  left: 22px;
+}
+
+/* Style the indicator (dot/circle) */
+.toggle-container .toggle-slider:after {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 2px;
+  border-radius: 50%;
+  background: #fff;
 }
 
 .nav-wrapper {
