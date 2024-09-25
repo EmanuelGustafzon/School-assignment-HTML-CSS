@@ -1,3 +1,5 @@
+const ToggleBtn = document.getElementById('theme-checkbox');
+
 const checkboxState = (state) => document.getElementById('theme-checkbox').checked = state;
 
 const localSavedThemePreference = () => {
@@ -46,3 +48,6 @@ const initTheme = () => {
         checkboxState(false);
     }
 };
+
+document.addEventListener('DOMContentLoaded', initTheme);
+ToggleBtn.addEventListener('click', toggleTheme);
