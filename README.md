@@ -5,7 +5,7 @@
 * Develop responsive websites with HTML, CSS and SCSS.
 * Work with Figma and use wireframes when coding. 
 * SEO for developers
-* Accessibilty, this area is still to be improved but we learned different teqniques for accessibilty that I can adapt in future projects.  
+* Accessibilty
 * Theme management
 
 ## See the design in Figma here
